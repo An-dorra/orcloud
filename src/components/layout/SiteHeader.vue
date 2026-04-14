@@ -59,7 +59,7 @@ const navigationItems = [
 .site-header {
   position: relative;
   z-index: 20;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   background: #ffffff;
   backdrop-filter: blur(15px);

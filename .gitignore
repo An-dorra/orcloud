@@ -8,6 +8,9 @@ dist/
 docs/
 impl-hero.png
 
+# Git worktrees should stay out of source control.
+.worktrees/
+
 # Local environment files should stay outside source control.
 .env
 .env.*

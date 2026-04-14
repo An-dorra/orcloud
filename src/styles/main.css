@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+/* Full-bleed layout utilities keep 1920px content centered on wide screens. */
+.full-bleed {
+  width: 100%;
+}
+
+.full-bleed__inner {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
 /* Smooth rendering gives the starter a clean baseline across platforms. */
 body {
   margin: 0;

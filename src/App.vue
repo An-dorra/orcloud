@@ -18,7 +18,7 @@ import SiteHeader from '@/components/layout/SiteHeader.vue'
 
 <style scoped>
 .app-shell {
-  width: 1920px;
+  width: 100%;
   min-height: 100vh;
   overflow: hidden;
   background: #ffffff;

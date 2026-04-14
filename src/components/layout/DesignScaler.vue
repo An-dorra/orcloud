@@ -51,9 +51,8 @@ onUnmounted(() => {
 
 <style scoped>
 .design-static-shell {
-  width: 1920px;
+  width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
   background: #ffffff;
 }
 </style>

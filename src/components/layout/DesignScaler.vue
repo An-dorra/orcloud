@@ -4,7 +4,7 @@
     :width="1920"
     :height="1080"
     :auto-scale="{ x: false, y: false }"
-    :body-overflow-hidden="false"
+    :body-overflow-hidden="true"
     :box-style="scaleBoxStyle"
     :wrapper-style="scaleWrapperStyle"
   >
@@ -27,12 +27,12 @@ const shouldScale = computed(() => viewportWidth.value < 1920)
 const scaleBoxStyle = {
   height: 'auto',
   minHeight: '100vh',
-  overflow: 'visible',
+  overflow: 'hidden',
   backgroundColor: '#ffffff',
 }
 
 const scaleWrapperStyle = {
-  overflow: 'visible',
+  overflow: 'hidden',
 }
 
 function syncViewportWidth() {

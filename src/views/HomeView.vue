@@ -1,52 +1,56 @@
 <template>
   <div class="home-page">
     <section class="hero-section" :style="{ backgroundImage: `url(${heroCloudInfrastructure})` }">
-      <div class="hero-section__content">
-        <h1>
-          The Infrastructure of
-          <br />
-          the Future
-        </h1>
-        <p>
-          Origins Quantum delivers a next-generation neural
-          <br />
-          architecture designed for low-latency, high-availability
-          <br />
-          global operations.
-        </p>
-        <div class="hero-section__actions">
-          <a href="#">Get Started</a>
-          <a href="#" class="hero-section__secondary">Learn More</a>
-        </div>
-      </div>
-      <div class="hero-section__value-row">
-        <article v-for="item in valueCards" :key="item.title" class="hero-value">
-          <div>
-            <h2>{{ item.title }}</h2>
-            <p>{{ item.description }}</p>
+      <div class="hero-section__inner">
+        <div class="hero-section__content">
+          <h1>
+            The Infrastructure of
+            <br />
+            the Future
+          </h1>
+          <p>
+            Origins Quantum delivers a next-generation neural
+            <br />
+            architecture designed for low-latency, high-availability
+            <br />
+            global operations.
+          </p>
+          <div class="hero-section__actions">
+            <a href="#">Get Started</a>
+            <a href="#" class="hero-section__secondary">Learn More</a>
           </div>
-          <img class="hero-value__icon" :src="iconChevronRight" alt="" aria-hidden="true" />
-        </article>
+        </div>
+        <div class="hero-section__value-row">
+          <article v-for="item in valueCards" :key="item.title" class="hero-value">
+            <div>
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.description }}</p>
+            </div>
+            <img class="hero-value__icon" :src="iconChevronRight" alt="" aria-hidden="true" />
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="plans-section">
-      <div class="section-heading">
-        <h2>Stable, Secure, Credible</h2>
-        <p>Select from our wide range of cloud hosting solutions optimized for various workloads and enterprise scales.</p>
+      <div class="plans-section__inner">
+        <div class="section-heading">
+          <h2>Stable, Secure, Credible</h2>
+          <p>Select from our wide range of cloud hosting solutions optimized for various workloads and enterprise scales.</p>
+        </div>
+        <div class="plans-section__carousel">
+          <ProductPlanCard
+            v-for="(plan, index) in productPlans"
+            :key="`${plan.title}-${plan.price}`"
+            :class="`plan-card--pos-${index + 1}`"
+            :plan="plan"
+          />
+        </div>
+        <button class="more-button" type="button">
+          <span>More</span>
+          <img :src="iconMoreArrow" alt="" aria-hidden="true" />
+        </button>
       </div>
-      <div class="plans-section__carousel">
-        <ProductPlanCard
-          v-for="(plan, index) in productPlans"
-          :key="`${plan.title}-${plan.price}`"
-          :class="`plan-card--pos-${index + 1}`"
-          :plan="plan"
-        />
-      </div>
-      <button class="more-button" type="button">
-        <span>More</span>
-        <img :src="iconMoreArrow" alt="" aria-hidden="true" />
-      </button>
     </section>
 
     <section class="industries-section">
@@ -119,12 +123,14 @@
     </section>
 
     <section class="assistant-section">
-      <img class="assistant-section__rings" :src="orclawRingBackground" alt="" />
-      <img class="assistant-section__crab" :src="orclawAssistantCrab" alt="OrClaw assistant crab" />
-      <div class="assistant-section__content">
-        <h2>Meet "OrClaw"<br />Your Personal AI Assistant</h2>
-        <p>Intelligent resource management, troubleshooting, and cloud optimization at your fingertips.</p>
-        <a href="#">Click to jump →</a>
+      <div class="assistant-section__inner">
+        <img class="assistant-section__rings" :src="orclawRingBackground" alt="" />
+        <img class="assistant-section__crab" :src="orclawAssistantCrab" alt="OrClaw assistant crab" />
+        <div class="assistant-section__content">
+          <h2>Meet "OrClaw"<br />Your Personal AI Assistant</h2>
+          <p>Intelligent resource management, troubleshooting, and cloud optimization at your fingertips.</p>
+          <a href="#">Click to jump →</a>
+        </div>
       </div>
     </section>
   </div>
@@ -153,7 +159,7 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
 
 <style scoped>
 .home-page {
-  width: 1920px;
+  width: 100%;
   background: #ffffff;
   color: #1d2129;
   font-family: Montserrat, Inter, Arial, sans-serif;
@@ -163,14 +169,23 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 920px;
   margin-top: -80px;
-  padding: 192px 0 0 120px;
   overflow: hidden;
   background: #02010f;
   background-repeat: no-repeat;
-  background-position: 0 -6px;
+  background-position: center -6px;
   background-size: 1920px 926px;
+}
+
+.hero-section__inner {
+  width: 1920px;
+  margin: 0 auto;
+  padding: 192px 0 0 120px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .hero-section__content {
@@ -300,10 +315,18 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
 
 .plans-section {
   position: relative;
+  width: 100%;
   height: 1000px;
   padding-top: 108px;
   overflow: hidden;
   background: #ffffff;
+}
+
+.plans-section__inner {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
 }
 
 .plans-section .section-heading {
@@ -343,7 +366,7 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
   display: block;
 }
 
-.plans-section > .more-button {
+.plans-section__inner > .more-button {
   position: absolute;
   left: 830px;
   top: 853px;
@@ -599,11 +622,27 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
   height: 501px;
 }
 
+.industries-section,
+.market-section,
+.network-section,
+.news-section {
+  width: 1920px;
+  margin: 0 auto;
+}
+
 .assistant-section {
   position: relative;
+  width: 100%;
   height: 485px;
   overflow: hidden;
   background: #1d2129;
+}
+
+.assistant-section__inner {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
 }
 
 .assistant-section__rings {

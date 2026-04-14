@@ -1,35 +1,37 @@
 <template>
   <footer class="site-footer">
-    <div class="site-footer__promises">
-      <span v-for="item in promises" :key="item" class="site-footer__promise">
-        <span class="site-footer__promise-icon"></span>
-        {{ item }}
-      </span>
-    </div>
-
-    <div class="site-footer__main">
-      <div class="site-footer__intro">
-        <img class="site-footer__logo" :src="originsCloudLogo" alt="Origins Cloud" />
-        <p>
-          A global leading cloud computing service provider committed to making innovation accessible for every enterprise.
-        </p>
+    <div class="site-footer__inner">
+      <div class="site-footer__promises">
+        <span v-for="item in promises" :key="item" class="site-footer__promise">
+          <span class="site-footer__promise-icon"></span>
+          {{ item }}
+        </span>
       </div>
 
-      <div class="site-footer__columns">
-        <div v-for="column in footerColumns" :key="column.title" class="site-footer__column">
-          <h3>{{ column.title }}</h3>
-          <a v-for="link in column.links" :key="link" href="#">{{ link }}</a>
+      <div class="site-footer__main">
+        <div class="site-footer__intro">
+          <img class="site-footer__logo" :src="originsCloudLogo" alt="Origins Cloud" />
+          <p>
+            A global leading cloud computing service provider committed to making innovation accessible for every enterprise.
+          </p>
+        </div>
+
+        <div class="site-footer__columns">
+          <div v-for="column in footerColumns" :key="column.title" class="site-footer__column">
+            <h3>{{ column.title }}</h3>
+            <a v-for="link in column.links" :key="link" href="#">{{ link }}</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="site-footer__bottom">
-      <p>© 2016-2024 OrCloud www.originscloud.io.</p>
-      <div class="site-footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Legal Compliance</a>
-        <a href="#">Friendship Links</a>
+      <div class="site-footer__bottom">
+        <p>© 2016-2024 OrCloud www.originscloud.io.</p>
+        <div class="site-footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Legal Compliance</a>
+          <a href="#">Friendship Links</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -62,10 +64,15 @@ const footerColumns = [
 
 <style scoped>
 .site-footer {
-  width: 1920px;
+  width: 100%;
   height: 516px;
   border-top: 1px solid rgba(226, 232, 240, 0.5);
   background: #f8f8fa;
+}
+
+.site-footer__inner {
+  width: 1920px;
+  margin: 0 auto;
 }
 
 .site-footer__promises {

@@ -1,0 +1,30 @@
+{
+  "name": "orcloud-vue-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "test": "vitest",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.app.json",
+    "build": "vue-tsc --noEmit -p tsconfig.app.json && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "latest",
+    "@vitejs/plugin-vue": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "v-scale-screen": "^2.3.0",
+    "vite": "latest",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@vue/test-utils": "latest",
+    "jsdom": "latest",
+    "vitest": "latest",
+    "vue-tsc": "latest"
+  }
+}

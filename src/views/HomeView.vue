@@ -179,6 +179,13 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
   background-size: 1920px 926px;
 }
 
+@media (min-width: 1920px) {
+  .hero-section {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
 .hero-section__inner {
   width: 1920px;
   margin: 0 auto;

@@ -1,37 +1,39 @@
 <template>
   <header class="site-header">
-    <RouterLink class="site-header__brand" to="/" aria-label="Origins Cloud home">
-      <img class="site-header__symbol" :src="originsCloudSymbol" alt="" />
-      <img class="site-header__wordmark" :src="originsCloudWordmark" alt="Origins Cloud" />
-    </RouterLink>
+    <div class="site-header__inner">
+      <RouterLink class="site-header__brand" to="/" aria-label="Origins Cloud home">
+        <img class="site-header__symbol" :src="originsCloudSymbol" alt="" />
+        <img class="site-header__wordmark" :src="originsCloudWordmark" alt="Origins Cloud" />
+      </RouterLink>
 
-    <nav class="site-header__nav" aria-label="Primary navigation">
-      <RouterLink
-        v-for="item in navigationItems"
-        :key="item.label"
-        class="site-header__link"
-        :to="item.to"
-      >
-        {{ item.label }}
-        <img class="site-header__caret" :src="iconCaretDown" alt="" aria-hidden="true" />
-      </RouterLink>
-    </nav>
+      <nav class="site-header__nav" aria-label="Primary navigation">
+        <RouterLink
+          v-for="item in navigationItems"
+          :key="item.label"
+          class="site-header__link"
+          :to="item.to"
+        >
+          {{ item.label }}
+          <img class="site-header__caret" :src="iconCaretDown" alt="" aria-hidden="true" />
+        </RouterLink>
+      </nav>
 
-    <div class="site-header__actions" aria-label="Account links">
-      <button class="site-header__icon" type="button" aria-label="Language">
-        <img :src="iconGlobe" alt="" aria-hidden="true" />
-      </button>
-      <button class="site-header__icon" type="button" aria-label="App menu">
-        <img :src="iconApps" alt="" aria-hidden="true" />
-      </button>
-      <img class="site-header__divider" :src="iconVerticalDivider" alt="" aria-hidden="true" />
-      <RouterLink class="site-header__plain-link site-header__plain-link--light" to="/">
-        Console
-      </RouterLink>
-      <RouterLink class="site-header__plain-link site-header__plain-link--light" to="/">
-        Login
-      </RouterLink>
-      <RouterLink class="site-header__register" to="/">Register</RouterLink>
+      <div class="site-header__actions" aria-label="Account links">
+        <button class="site-header__icon" type="button" aria-label="Language">
+          <img :src="iconGlobe" alt="" aria-hidden="true" />
+        </button>
+        <button class="site-header__icon" type="button" aria-label="App menu">
+          <img :src="iconApps" alt="" aria-hidden="true" />
+        </button>
+        <img class="site-header__divider" :src="iconVerticalDivider" alt="" aria-hidden="true" />
+        <RouterLink class="site-header__plain-link site-header__plain-link--light" to="/">
+          Console
+        </RouterLink>
+        <RouterLink class="site-header__plain-link site-header__plain-link--light" to="/">
+          Login
+        </RouterLink>
+        <RouterLink class="site-header__register" to="/">Register</RouterLink>
+      </div>
     </div>
   </header>
 </template>
@@ -57,13 +59,19 @@ const navigationItems = [
 .site-header {
   position: relative;
   z-index: 20;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  backdrop-filter: blur(15px);
+}
+
+.site-header__inner {
   display: flex;
   align-items: center;
   width: 1920px;
   height: 80px;
   padding: 0 33px 0 40px;
-  background: #ffffff;
-  backdrop-filter: blur(15px);
+  margin: 0 auto;
 }
 
 .site-header__brand {

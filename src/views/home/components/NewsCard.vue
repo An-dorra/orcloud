@@ -4,12 +4,13 @@
     <h3>{{ card.title }}</h3>
     <div class="news-card__footer">
       <time>{{ card.date }}</time>
-      <span aria-hidden="true">→</span>
+      <img :src="iconArrowCircleFilled" alt="" aria-hidden="true" />
     </div>
   </article>
 </template>
 
 <script setup lang="ts">
+import iconArrowCircleFilled from '@/assets/icons/icon-arrow-circle-filled.png'
 import type { NewsCard } from '@/data/home'
 
 defineProps<{
@@ -58,15 +59,9 @@ defineProps<{
   letter-spacing: 1px;
 }
 
-.news-card span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.news-card__footer img {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-  background: #0168f0;
-  color: #ffffff;
-  font-size: 24px;
+  display: block;
 }
 </style>

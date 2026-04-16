@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header">
+  <FullBleedSection tag="header" class="site-header" content-class="site-header__shell">
     <RouterLink class="site-header__brand" to="/" aria-label="Origins Cloud home">
       <img class="site-header__symbol" :src="originsCloudSymbol" alt="" />
       <img class="site-header__wordmark" :src="originsCloudWordmark" alt="Origins Cloud" />
@@ -33,10 +33,11 @@
       </RouterLink>
       <RouterLink class="site-header__register" to="/">Register</RouterLink>
     </div>
-  </header>
+  </FullBleedSection>
 </template>
 
 <script setup lang="ts">
+import FullBleedSection from '@/components/layout/FullBleedSection.vue'
 import originsCloudSymbol from '@/assets/images/origins-cloud-symbol.svg'
 import originsCloudWordmark from '@/assets/images/origins-cloud-wordmark.svg'
 import iconApps from '@/assets/icons/icon-apps.svg'
@@ -57,13 +58,16 @@ const navigationItems = [
 .site-header {
   position: relative;
   z-index: 20;
-  display: flex;
-  align-items: center;
-  width: 1920px;
   height: 80px;
-  padding: 0 33px 0 40px;
   background: #ffffff;
   backdrop-filter: blur(15px);
+}
+
+.site-header :deep(.site-header__shell) {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 33px 0 40px;
 }
 
 .site-header__brand {

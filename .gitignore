@@ -19,3 +19,4 @@ impl-hero.png
 .DS_Store
 .idea/
 .vscode/
+tmp/

@@ -1,6 +1,10 @@
 <template>
   <div class="home-page">
-    <section class="hero-section" :style="{ backgroundImage: `url(${heroCloudInfrastructure})` }">
+    <FullBleedSection
+      class="hero-section"
+      content-class="hero-section__shell"
+      :style="{ backgroundImage: `url(${heroCloudInfrastructure})` }"
+    >
       <div class="hero-section__content">
         <h1>
           The Infrastructure of
@@ -20,52 +24,20 @@
         </div>
       </div>
       <div class="hero-section__value-row">
-        <article v-for="item in valueCards" :key="item.title" class="hero-value">
-          <div>
-            <h2>{{ item.title }}</h2>
-            <p>{{ item.description }}</p>
-          </div>
-          <img class="hero-value__icon" :src="iconChevronRight" alt="" aria-hidden="true" />
-        </article>
+        <div class="hero-section__value-row-shell">
+          <article v-for="item in valueCards" :key="item.title" class="hero-value">
+            <div>
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.description }}</p>
+            </div>
+            <img class="hero-value__icon" :src="iconChevronRight" alt="" aria-hidden="true" />
+          </article>
+        </div>
       </div>
-    </section>
+    </FullBleedSection>
 
-    <section class="plans-section">
-      <div class="section-heading">
-        <h2>Stable, Secure, Credible</h2>
-        <p>Select from our wide range of cloud hosting solutions optimized for various workloads and enterprise scales.</p>
-      </div>
-      <div class="plans-section__carousel">
-        <ProductPlanCard
-          v-for="(plan, index) in productPlans"
-          :key="`${plan.title}-${plan.price}`"
-          :class="`plan-card--pos-${index + 1}`"
-          :plan="plan"
-        />
-      </div>
-      <button class="more-button" type="button">
-        <span>More</span>
-        <img :src="iconMoreArrow" alt="" aria-hidden="true" />
-      </button>
-    </section>
-
-    <section class="industries-section">
-      <div class="section-heading">
-        <h2>Full-stack, 100s of industries</h2>
-        <p>Products and cloud innovations, enabling business scenarios and vertical industries.</p>
-      </div>
-      <div class="industries-section__grid">
-        <article
-          v-for="card in industryCards"
-          :key="card.title"
-          class="industry-card"
-          :class="{ 'industry-card--active': card.active }"
-        >
-          <img :src="card.image" :alt="card.title" />
-          <h3>{{ card.title }}</h3>
-        </article>
-      </div>
-    </section>
+    <PlansCarouselSection />
+    <IndustriesAccordionSection />
 
     <section class="market-section">
       <div class="section-heading">
@@ -74,14 +46,19 @@
       </div>
       <div class="market-section__body">
         <div class="market-services">
-          <article v-for="service in marketplaceServices" :key="service.title" :class="{ active: service.active }">
-            <span></span>
-            <div>
-              <h3>{{ service.title }}</h3>
-              <p v-if="service.description">{{ service.description }}</p>
-            </div>
-          </article>
-          <button type="button">Explore Marketplace →</button>
+          <div class="market-services__items">
+            <article v-for="service in marketplaceServices" :key="service.title" :class="{ active: service.active }">
+              <img :src="service.icon" :alt="`${service.title} icon`" />
+              <div>
+                <h3>{{ service.title }}</h3>
+                <p v-if="service.description">{{ service.description }}</p>
+              </div>
+            </article>
+          </div>
+          <button type="button">
+            <span>Explore Marketplace</span>
+            <img :src="iconMoreArrow" alt="" aria-hidden="true" />
+          </button>
         </div>
         <img class="market-section__image" :src="marketplaceCloudEcosystem" alt="Cloud market ecosystem" />
       </div>
@@ -114,11 +91,16 @@
       </div>
       <div class="news-section__grid">
         <NewsCard v-for="card in newsCards" :key="card.title" :card="card" />
-        <div class="news-section__more"><button class="more-button" type="button">More →</button></div>
+        <div class="news-section__more">
+          <button class="more-button" type="button" aria-label="More news">
+            <span class="more-button__sr-only">More</span>
+            <img :src="buttonMorePill" alt="" aria-hidden="true" />
+          </button>
+        </div>
       </div>
     </section>
 
-    <section class="assistant-section">
+    <FullBleedSection class="assistant-section" content-class="assistant-section__shell">
       <img class="assistant-section__rings" :src="orclawRingBackground" alt="" />
       <img class="assistant-section__crab" :src="orclawAssistantCrab" alt="OrClaw assistant crab" />
       <div class="assistant-section__content">
@@ -126,29 +108,30 @@
         <p>Intelligent resource management, troubleshooting, and cloud optimization at your fingertips.</p>
         <a href="#">Click to jump →</a>
       </div>
-    </section>
+    </FullBleedSection>
   </div>
 </template>
 
 <script setup lang="ts">
+import FullBleedSection from '@/components/layout/FullBleedSection.vue'
 import globalNetworkMap from '@/assets/images/global-network-map.svg'
 import heroCloudInfrastructure from '@/assets/images/hero-cloud-infrastructure.jpg'
 import marketplaceCloudEcosystem from '@/assets/images/marketplace-cloud-ecosystem.png'
 import orclawAssistantCrab from '@/assets/images/orclaw-assistant-crab.svg'
 import orclawRingBackground from '@/assets/images/orclaw-ring-background.svg'
+import buttonMorePill from '@/assets/icons/button-more-pill.png'
 import iconChevronRight from '@/assets/icons/icon-chevron-right.svg'
 import iconMoreArrow from '@/assets/icons/icon-more-arrow.svg'
 import {
   certificationLogos,
-  industryCards,
   marketplaceServices,
   newsCards,
-  productPlans,
   stats,
   valueCards,
 } from '@/data/home'
+import IndustriesAccordionSection from '@/views/home/components/IndustriesAccordionSection.vue'
 import NewsCard from '@/views/home/components/NewsCard.vue'
-import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
+import PlansCarouselSection from '@/views/home/components/PlansCarouselSection.vue'
 </script>
 
 <style scoped>
@@ -160,17 +143,20 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
 }
 
 .hero-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 920px;
   margin-top: -80px;
-  padding: 192px 0 0 120px;
   overflow: hidden;
   background: #02010f;
   background-repeat: no-repeat;
   background-position: 0 -6px;
   background-size: 1920px 926px;
+}
+
+.hero-section :deep(.hero-section__shell) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 920px;
+  padding: 192px 0 0 120px;
 }
 
 .hero-section__content {
@@ -224,12 +210,17 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
 .hero-section__value-row {
   margin-top: auto;
   margin-left: -120px;
-  display: flex;
   width: 1920px;
   height: 183px;
-  padding: 0 100px;
   border-bottom: 2px solid #ebedf1;
   background: #ffffff;
+}
+
+.hero-section__value-row-shell {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 100px;
 }
 
 .hero-value {
@@ -298,208 +289,155 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
   line-height: 1.22;
 }
 
-.plans-section {
-  position: relative;
-  height: 1000px;
-  padding-top: 108px;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.plans-section .section-heading {
-  margin-left: 120px;
-}
-
-.plans-section .section-heading p {
-  width: 1076px;
-}
-
-.plans-section__carousel {
-  position: relative;
-  width: 2016px;
-  height: 475px;
-  margin-top: 90px;
-  margin-left: -48px;
-}
-
 .more-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   width: 250px;
   height: 40px;
   border: 0;
-  border-radius: 500px;
-  background: rgba(122, 122, 122, 0.1);
-  color: #1d2129;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 0;
+  background: transparent;
 }
 
 .more-button img {
-  width: 20px;
-  height: 20px;
+  width: 250px;
+  height: 40px;
   display: block;
 }
 
-.plans-section > .more-button {
+.more-button__sr-only {
   position: absolute;
-  left: 830px;
-  top: 853px;
-}
-
-.plans-section__carousel :deep(.plan-card) {
-  position: absolute;
-}
-
-.plans-section__carousel :deep(.plan-card--pos-1) {
-  left: 0;
-  top: 45px;
-}
-
-.plans-section__carousel :deep(.plan-card--pos-2) {
-  left: 394px;
-  top: 30px;
-}
-
-.plans-section__carousel :deep(.plan-card--pos-3) {
-  left: 788px;
-  top: 0;
-}
-
-.plans-section__carousel :deep(.plan-card--pos-4) {
-  left: 1202px;
-  top: 27px;
-}
-
-.plans-section__carousel :deep(.plan-card--pos-5) {
-  left: 1596px;
-  top: 45px;
-}
-
-.industries-section {
-  height: 1083px;
-  padding: 116px 120px 0;
-  background: #ffffff;
-}
-
-.industries-section .section-heading p {
-  width: 1050px;
-}
-
-.industries-section__grid {
-  display: grid;
-  grid-template-columns: 430px 315px 315px 315px 315px;
-  gap: 16px;
-  margin-top: 80px;
-}
-
-.industry-card {
-  position: relative;
-  height: 560px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  background: #111827;
-}
-
-.industry-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.industry-card::after {
-  position: absolute;
-  inset: 0;
-  content: '';
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.58));
-}
-
-.industry-card h3 {
-  position: absolute;
-  left: 24px;
-  bottom: 24px;
-  z-index: 1;
-  margin: 0;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 600;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .market-section {
-  height: 1000px;
-  padding: 154px 120px 0;
+  padding: 126px 120px 84px;
   background: #ffffff;
 }
 
 .market-section .section-heading p {
-  width: 1005px;
+  width: 1038px;
+  color: #7f8796;
+  font-size: 22px;
+  line-height: 1.18;
 }
 
 .market-section__body {
   display: flex;
-  gap: 40px;
-  margin-top: 60px;
+  align-items: flex-start;
+  gap: 142px;
+  margin-top: 44px;
 }
 
 .market-services {
-  width: 557px;
+  flex: 0 0 444px;
+  display: flex;
+  flex-direction: column;
+  height: 514px;
+  margin-top: 10px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.market-services__items {
+  display: flex;
+  flex-direction: column;
 }
 
 .market-services article {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   align-items: flex-start;
-  padding: 18px 0;
+  padding: 12px 0 10px;
 }
 
 .market-services article.active {
-  padding-top: 24px;
+  padding-top: 12px;
+  padding-bottom: 42px;
 }
 
-.market-services article span {
-  width: 26px;
-  height: 26px;
-  margin-top: 3px;
-  border-radius: 50%;
-  background: #0168f0;
+.market-services article > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-services article img {
+  display: block;
+  flex-shrink: 0;
+}
+
+.market-services article.active img {
+  width: 30px;
+  height: 30px;
+  margin-top: 1px;
+}
+
+.market-services article:not(.active) img {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
 }
 
 .market-services h3 {
   margin: 0;
   color: #1d2129;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.18;
 }
 
 .market-services article.active h3 {
   font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .market-services p {
-  width: 462px;
-  margin: 20px 0 0;
-  color: #4e5969;
-  font-size: 22px;
+  width: 372px;
+  margin: 10px 0 0;
+  color: #7f8796;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 1.22;
+  line-height: 1.18;
 }
 
 .market-services button {
-  width: 550px;
-  height: 60px;
-  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 398px;
+  height: 40px;
+  margin-top: auto;
   border: 0;
-  border-radius: 8px;
+  border-radius: 5px;
   background: #0168f0;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 
+.market-services button img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
 .market-section__image {
-  width: 1080px;
-  height: 517px;
+  flex: 1 1 auto;
+  width: auto;
+  max-width: none;
+  height: 514px;
+  min-width: 0;
+  margin-top: 0;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -600,10 +538,13 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
 }
 
 .assistant-section {
+  background: #1d2129;
+}
+
+.assistant-section :deep(.assistant-section__shell) {
   position: relative;
   height: 485px;
   overflow: hidden;
-  background: #1d2129;
 }
 
 .assistant-section__rings {
@@ -660,5 +601,22 @@ import ProductPlanCard from '@/views/home/components/ProductPlanCard.vue'
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+}
+
+@media (min-width: 1921px) {
+  .hero-section {
+    background-position: center -6px;
+    background-size: 100vw auto;
+  }
+
+  .hero-section__value-row {
+    width: 100vw;
+    margin-left: calc(50% - 50vw - 60px);
+  }
+
+  .hero-section__value-row-shell {
+    width: 1920px;
+    margin: 0 auto;
+  }
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <footer class="site-footer">
     <div class="site-footer__promises">
-      <span v-for="item in promises" :key="item" class="site-footer__promise">
-        <span class="site-footer__promise-icon"></span>
-        {{ item }}
+      <span v-for="item in promises" :key="item.label" class="site-footer__promise">
+        <img class="site-footer__promise-icon" :src="item.icon" alt="" aria-hidden="true" />
+        {{ item.label }}
       </span>
     </div>
 
@@ -37,8 +37,17 @@
 
 <script setup lang="ts">
 import originsCloudLogo from '@/assets/images/origins-cloud-logo-footer.svg'
+import iconFooterNoFiling from '@/assets/icons/icon-footer-no-filing.png'
+import iconFooterRefund from '@/assets/icons/icon-footer-refund.png'
+import iconFooterSupport from '@/assets/icons/icon-footer-support.png'
+import iconFooterVip from '@/assets/icons/icon-footer-vip.png'
 
-const promises = ['5-Day Refund', 'No Filing Required', 'VIP Service', '24*7 Support']
+const promises = [
+  { label: '5-Day Refund', icon: iconFooterRefund },
+  { label: 'No Filing Required', icon: iconFooterNoFiling },
+  { label: 'VIP Service', icon: iconFooterVip },
+  { label: '24*7 Support', icon: iconFooterSupport },
+]
 
 const footerColumns = [
   {
@@ -88,10 +97,9 @@ const footerColumns = [
 }
 
 .site-footer__promise-icon {
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background: #1683ff;
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .site-footer__main {

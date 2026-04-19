@@ -1,39 +1,82 @@
 <template>
-  <section class="industries-section">
+  <section class="industries-section min-h-[1030px] bg-white px-[120px] pt-[108px]">
     <div class="section-heading">
-      <h2>Full-stack, 1000s of industries</h2>
-      <p>
+      <h2 class="reveal-on-scroll m-0 text-[58px] leading-[1.18] font-semibold text-[#1d2129]">Full-stack, 1000s of industries</h2>
+      <p class="reveal-on-scroll reveal-delay-100 mt-4 max-w-[1220px] text-[22px] leading-[1.32] font-[300] text-[#7f8796]">
         Focusing on rich business scenarios, accumulating best practices from various industries, and providing
         solutions for diverse application scenarios.
       </p>
     </div>
 
-    <div class="industries-section__grid" :style="gridStyle">
-      <article
-        v-for="(card, index) in resolvedCards"
-        :key="card.title"
-        class="industry-card"
-        :class="{ 'industry-card--active': card.expanded }"
-        role="button"
-        tabindex="0"
-        :aria-pressed="card.expanded"
-        @click="setActiveIndex(index)"
-        @keydown.enter.prevent="setActiveIndex(index)"
-        @keydown.space.prevent="setActiveIndex(index)"
+    <div class="industry-card-grid-reveal reveal-on-scroll reveal-delay-200">
+      <div
+        class="industry-card-grid mt-16 grid gap-4 transition-[grid-template-columns] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        :style="gridStyle"
       >
-        <img :src="card.image" :alt="card.title" />
-        <div class="industry-card__overlay">
-          <h3 :class="{ 'industry-card__title--single-line': card.expanded }">{{ getDisplayTitle(card.title, card.expanded) }}</h3>
-          <p v-if="card.expanded && card.description" class="industry-card__description">{{ card.description }}</p>
-          <button v-if="card.expanded" class="industry-card__cta" type="button">
-            <img class="industry-card__cta-icon" :src="iconConsultNow" alt="" aria-hidden="true" />
-            <span>{{ card.ctaLabel ?? 'Consult Now' }}</span>
-          </button>
-          <span v-else class="industry-card__link-icon" aria-hidden="true">
-            <img :src="iconArrowCircleOutline" alt="" />
-          </span>
-        </div>
-      </article>
+        <article
+          v-for="(card, index) in resolvedCards"
+          :key="card.title"
+          class="industry-card relative h-[560px] cursor-pointer overflow-hidden border-0 bg-[#111827] p-0 transition-[filter,transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline-2 focus-visible:outline-[#0168f0] focus-visible:outline-offset-4"
+          :class="card.expanded ? 'industry-card--active shadow-[0_22px_60px_rgba(1,104,240,0.18)]' : 'saturate-[0.92]'"
+          role="button"
+          tabindex="0"
+          :aria-pressed="card.expanded"
+          @click="setActiveIndex(index)"
+          @mouseenter="setActiveIndex(index)"
+          @keydown.enter.prevent="setActiveIndex(index)"
+          @keydown.space.prevent="setActiveIndex(index)"
+        >
+          <img
+            class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            :class="card.expanded ? 'scale-[1.04]' : 'scale-100'"
+            :src="card.image"
+            :alt="card.title"
+          />
+          <div
+            class="industry-card__overlay--collapsed absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(0,0,0,0.72)_0%,rgba(0,0,0,0.24)_38%,rgba(0,0,0,0.58)_100%)] transition-opacity duration-500 ease-out"
+            :class="card.expanded ? 'opacity-0' : 'opacity-100'"
+            aria-hidden="true"
+          />
+          <div
+            class="industry-card__overlay--expanded absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.28)_36%,rgba(0,0,0,0.62)_100%),linear-gradient(90deg,rgba(1,104,240,0.14)_0%,transparent_28%)] transition-opacity duration-500 ease-out"
+            :class="card.expanded ? 'opacity-100' : 'opacity-0'"
+            aria-hidden="true"
+          />
+          <div
+            class="absolute inset-0 z-[2] flex flex-col transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            :class="card.expanded ? 'px-6 pt-[22px] pb-5' : 'px-[18px] pt-6 pb-5'"
+          >
+            <h3
+              class="m-0 text-[22px] leading-[1.18] font-semibold text-white whitespace-pre-line transition-[font-size,line-height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+              :class="{ 'whitespace-nowrap text-[24px]': card.expanded }"
+            >
+              {{ getDisplayTitle(card.title, card.expanded) }}
+            </h3>
+            <Transition name="industry-card-fade">
+              <p
+                v-if="card.expanded && card.description"
+                class="industry-card__description mt-3 w-[440px] text-[16px] leading-[1.36] font-[300] text-[rgba(255,255,255,0.76)]"
+              >
+                {{ card.description }}
+              </p>
+            </Transition>
+            <Transition name="industry-card-fade" mode="out-in">
+              <button
+                v-if="card.expanded"
+                key="cta"
+                class="industry-card__cta mt-auto inline-flex w-fit items-center gap-2 rounded-[8px] border-0 bg-[rgba(255,255,255,0.12)] px-[18px] py-[10px] pl-3 text-[14px] font-medium text-white [backdrop-filter:blur(8px)] transition-colors duration-300 hover:bg-[rgba(255,255,255,0.18)]"
+                type="button"
+              >
+                <img class="industry-card__cta-icon block h-5 w-5" :src="iconConsultNow" alt="" aria-hidden="true" />
+                <span>{{ card.ctaLabel ?? 'Consult Now' }}</span>
+              </button>
+              <span v-else key="link" class="industry-card__link-icon mt-auto block" aria-hidden="true">
+                <img class="block h-12 w-12" :src="iconArrowCircleOutline" alt="" />
+              </span>
+            </Transition>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>
@@ -77,146 +120,16 @@ const getDisplayTitle = (title: string, expanded: boolean) => {
 </script>
 
 <style scoped>
-.industries-section {
-  min-height: 1030px;
-  padding: 108px 120px 0;
-  background: #ffffff;
+.industry-card-fade-enter-active,
+.industry-card-fade-leave-active {
+  transition:
+    opacity 220ms ease,
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.section-heading h2 {
-  margin: 0;
-  color: #1d2129;
-  font-size: 58px;
-  font-weight: 600;
-  line-height: 1.18;
-}
-
-.section-heading p {
-  width: 1220px;
-  max-width: 1220px;
-  margin: 16px 0 0;
-  color: #7f8796;
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 1.32;
-}
-
-.industries-section__grid {
-  display: grid;
-  gap: 16px;
-  margin-top: 64px;
-  transition: grid-template-columns 320ms ease;
-}
-
-.industry-card {
-  position: relative;
-  height: 560px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  background: #111827;
-  cursor: pointer;
-  transition: transform 320ms ease, filter 320ms ease;
-}
-
-.industry-card:focus-visible {
-  outline: 2px solid #0168f0;
-  outline-offset: 4px;
-}
-
-.industry-card:not(.industry-card--active) {
-  filter: saturate(0.92);
-}
-
-.industry-card > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.industry-card::after {
-  position: absolute;
-  inset: 0;
-  content: '';
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.24) 38%, rgba(0, 0, 0, 0.58) 100%);
-}
-
-.industry-card--active::after {
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.28) 36%, rgba(0, 0, 0, 0.62) 100%),
-    linear-gradient(90deg, rgba(1, 104, 240, 0.14) 0%, transparent 28%);
-}
-
-.industry-card__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 24px 18px 20px 18px;
-}
-
-.industry-card--active .industry-card__overlay {
-  padding: 22px 24px 20px 24px;
-}
-
-.industry-card h3 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.18;
-  white-space: pre-line;
-}
-
-.industry-card--active h3 {
-  font-size: 24px;
-}
-
-.industry-card__title--single-line {
-  white-space: nowrap;
-}
-
-.industry-card__description {
-  width: 440px;
-  margin: 12px 0 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.36;
-}
-
-.industry-card__cta {
-  margin-top: auto;
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px 10px 12px;
-  border: 0;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  backdrop-filter: blur(8px);
-}
-
-.industry-card__cta-icon {
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-
-.industry-card__link-icon {
-  display: block;
-  margin-top: auto;
-  padding: 0;
-}
-
-.industry-card__link-icon img {
-  width: 48px;
-  height: 48px;
-  display: block;
+.industry-card-fade-enter-from,
+.industry-card-fade-leave-to {
+  opacity: 0;
+  transform: translateY(8px);
 }
 </style>

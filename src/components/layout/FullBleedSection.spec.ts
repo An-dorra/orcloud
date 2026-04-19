@@ -20,4 +20,17 @@ describe('FullBleedSection', () => {
     expect(wrapper.find('section.full-bleed-section.hero-section').exists()).toBe(true)
     expect(wrapper.find('.full-bleed-section__content.hero-section__content-shell .hero-copy').exists()).toBe(true)
   })
+
+  it('lets caller height utilities control the content wrapper height', () => {
+    const wrapper = mount(FullBleedSection, {
+      props: {
+        contentClass: 'h-[920px]',
+      },
+    })
+
+    const contentClasses = wrapper.find('.full-bleed-section__content').classes()
+
+    expect(contentClasses).toContain('h-[920px]')
+    expect(contentClasses).not.toContain('h-full')
+  })
 })

@@ -1,11 +1,16 @@
 <template>
-  <FullBleedSection class="plans-carousel-section" content-class="plans-carousel-section__shell">
-    <div class="plans-carousel-section__heading">
-      <h2>Stable, Secure, Credible</h2>
-      <p>Select from our wide range of cloud hosting solutions optimized for various workloads and enterprise scales.</p>
+  <FullBleedSection
+    class="overflow-hidden bg-white min-[1921px]:overflow-y-hidden min-[1921px]:overflow-x-visible"
+    content-class="h-[1000px] pt-[108px]"
+  >
+    <div class="ml-[120px]">
+      <h2 class="reveal-on-scroll m-0 text-[56px] leading-[1.22] font-semibold text-[#1d2129]">Stable, Secure, Credible</h2>
+      <p class="reveal-on-scroll reveal-delay-100 mt-4 w-[1076px] text-[28px] leading-[1.22] font-[300] text-[#4e5969]">
+        Select from our wide range of cloud hosting solutions optimized for various workloads and enterprise scales.
+      </p>
     </div>
 
-    <div class="plans-carousel__viewport">
+    <div class="plans-carousel-section__carousel reveal-on-scroll reveal-delay-200 mt-[84px]">
       <FixedSlotCarousel
         :items="productPlans"
         :initial-index="featuredPlanIndex"
@@ -20,9 +25,13 @@
       </FixedSlotCarousel>
     </div>
 
-    <button class="plans-carousel__more" type="button" aria-label="More plans">
-      <span class="plans-carousel__more-sr-only">More</span>
-      <img :src="buttonMorePill" alt="" aria-hidden="true" />
+    <button
+      class="reveal-on-scroll reveal-delay-300 mt-[33px] ml-[835px] inline-flex h-10 w-[250px] items-center justify-center border-0 bg-transparent p-0"
+      type="button"
+      aria-label="More plans"
+    >
+      <span class="sr-only">More</span>
+      <img class="block h-10 w-[250px]" :src="buttonMorePill" alt="" aria-hidden="true" />
     </button>
   </FullBleedSection>
 </template>
@@ -50,79 +59,3 @@ const slotLayouts: FixedSlotLayout[] = [
   { name: 'far-next', offset: 2, left: 1548, top: 18, zIndex: 1 },
 ]
 </script>
-
-<style scoped>
-.plans-carousel-section {
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.plans-carousel-section :deep(.plans-carousel-section__shell) {
-  height: 1000px;
-  padding-top: 108px;
-}
-
-.plans-carousel-section__heading {
-  margin-left: 120px;
-}
-
-.plans-carousel-section__heading h2 {
-  margin: 0;
-  color: #1d2129;
-  font-size: 56px;
-  font-weight: 600;
-  line-height: 1.22;
-}
-
-.plans-carousel-section__heading p {
-  width: 1076px;
-  margin: 16px 0 0;
-  color: #4e5969;
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1.22;
-}
-
-.plans-carousel__viewport {
-  margin-top: 84px;
-  margin-left: 0;
-}
-
-.plans-carousel__more {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 40px;
-  margin-top: 33px;
-  margin-left: 835px;
-  border: 0;
-  padding: 0;
-  background: transparent;
-}
-
-.plans-carousel__more img {
-  width: 250px;
-  height: 40px;
-  display: block;
-}
-
-.plans-carousel__more-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (min-width: 1921px) {
-  .plans-carousel-section {
-    overflow-x: visible;
-    overflow-y: hidden;
-  }
-}
-</style>

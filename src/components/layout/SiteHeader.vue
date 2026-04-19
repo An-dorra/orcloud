@@ -1,37 +1,46 @@
 <template>
-  <FullBleedSection tag="header" class="site-header" content-class="site-header__shell">
-    <RouterLink class="site-header__brand" to="/" aria-label="Origins Cloud home">
-      <img class="site-header__symbol" :src="originsCloudSymbol" alt="" />
-      <img class="site-header__wordmark" :src="originsCloudWordmark" alt="Origins Cloud" />
+  <FullBleedSection
+    tag="header"
+    class="site-header relative z-20 h-20 bg-white [backdrop-filter:blur(15px)]"
+    content-class="site-header__shell flex h-20 items-center pl-10 pr-[33px]"
+  >
+    <RouterLink class="site-header__brand flex items-center no-underline" to="/" aria-label="Origins Cloud home">
+      <img class="site-header__symbol h-[25px] w-[46px]" :src="originsCloudSymbol" alt="" />
+      <img class="site-header__wordmark ml-[9px] block h-[17.388px] w-[112.317px]" :src="originsCloudWordmark" alt="Origins Cloud" />
     </RouterLink>
 
-    <nav class="site-header__nav" aria-label="Primary navigation">
+    <nav class="site-header__nav flex flex-1 items-center justify-center gap-[60px]" aria-label="Primary navigation">
       <RouterLink
         v-for="item in navigationItems"
         :key="item.label"
-        class="site-header__link"
+        class="site-header__link inline-flex items-center gap-1 whitespace-nowrap text-[16px] font-normal text-[#1d2129] no-underline"
         :to="item.to"
       >
         {{ item.label }}
-        <img class="site-header__caret" :src="iconCaretDown" alt="" aria-hidden="true" />
+        <img class="site-header__caret block h-[18px] w-[18px]" :src="iconCaretDown" alt="" aria-hidden="true" />
       </RouterLink>
     </nav>
 
-    <div class="site-header__actions" aria-label="Account links">
-      <button class="site-header__icon" type="button" aria-label="Language">
-        <img :src="iconGlobe" alt="" aria-hidden="true" />
+    <div class="site-header__actions flex items-center gap-[30px]" aria-label="Account links">
+      <button class="site-header__icon h-5 w-5 border-0 bg-transparent p-0" type="button" aria-label="Language">
+        <img class="block h-5 w-5" :src="iconGlobe" alt="" aria-hidden="true" />
       </button>
-      <button class="site-header__icon" type="button" aria-label="App menu">
-        <img :src="iconApps" alt="" aria-hidden="true" />
+      <button class="site-header__icon h-5 w-5 border-0 bg-transparent p-0" type="button" aria-label="App menu">
+        <img class="block h-5 w-5" :src="iconApps" alt="" aria-hidden="true" />
       </button>
-      <img class="site-header__divider" :src="iconVerticalDivider" alt="" aria-hidden="true" />
-      <RouterLink class="site-header__plain-link site-header__plain-link--light" to="/">
+      <img class="site-header__divider block h-[15px] w-px" :src="iconVerticalDivider" alt="" aria-hidden="true" />
+      <RouterLink class="site-header__plain-link site-header__plain-link--light inline-flex items-center gap-1 whitespace-nowrap text-[16px] font-[300] text-[#1d2129] no-underline" to="/">
         Console
       </RouterLink>
-      <RouterLink class="site-header__plain-link site-header__plain-link--light" to="/">
+      <RouterLink class="site-header__plain-link site-header__plain-link--light inline-flex items-center gap-1 whitespace-nowrap text-[16px] font-[300] text-[#1d2129] no-underline" to="/">
         Login
       </RouterLink>
-      <RouterLink class="site-header__register" to="/">Register</RouterLink>
+      <RouterLink
+        class="site-header__register inline-flex h-10 w-[150px] items-center justify-center rounded-[400px] bg-[#0289f2] text-[16px] font-semibold text-white no-underline"
+        to="/"
+      >
+        Register
+      </RouterLink>
     </div>
   </FullBleedSection>
 </template>
@@ -53,109 +62,3 @@ const navigationItems = [
   { label: 'About Us', to: '/about' },
 ]
 </script>
-
-<style scoped>
-.site-header {
-  position: relative;
-  z-index: 20;
-  height: 80px;
-  background: #ffffff;
-  backdrop-filter: blur(15px);
-}
-
-.site-header :deep(.site-header__shell) {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  padding: 0 33px 0 40px;
-}
-
-.site-header__brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.site-header__symbol {
-  width: 46px;
-  height: 25px;
-}
-
-.site-header__wordmark {
-  width: 112.317px;
-  height: 17.388px;
-  margin-left: 9px;
-  display: block;
-}
-
-.site-header__nav {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  gap: 60px;
-  align-items: center;
-}
-
-.site-header__link,
-.site-header__plain-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  color: #1d2129;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.site-header__caret {
-  width: 18px;
-  height: 18px;
-  display: block;
-}
-
-.site-header__actions {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.site-header__icon {
-  width: 20px;
-  height: 20px;
-  border: 0;
-  background: transparent;
-  padding: 0;
-}
-
-.site-header__icon img {
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-
-.site-header__divider {
-  width: 1px;
-  height: 15px;
-  display: block;
-}
-
-.site-header__register {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 40px;
-  border-radius: 400px;
-  background: #0289f2;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.site-header__plain-link--light {
-  font-weight: 300;
-}
-</style>

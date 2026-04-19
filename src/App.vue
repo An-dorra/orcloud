@@ -1,6 +1,6 @@
 <template>
   <DesignScaler>
-    <div class="app-shell">
+    <div class="min-h-screen w-[1920px] bg-white">
       <SiteHeader />
       <main>
         <RouterView />
@@ -15,11 +15,3 @@ import DesignScaler from '@/components/layout/DesignScaler.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import SiteHeader from '@/components/layout/SiteHeader.vue'
 </script>
-
-<style scoped>
-.app-shell {
-  width: 1920px;
-  min-height: 100vh;
-  background: #ffffff;
-}
-</style>

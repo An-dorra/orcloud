@@ -1,35 +1,50 @@
 <template>
-  <footer class="site-footer">
-    <div class="site-footer__promises">
-      <span v-for="item in promises" :key="item.label" class="site-footer__promise">
-        <img class="site-footer__promise-icon" :src="item.icon" alt="" aria-hidden="true" />
+  <footer class="site-footer h-[516px] w-[1920px] border-t border-[rgba(226,232,240,0.5)] bg-[#fff]">
+    <div class="site-footer__promises flex h-[120px] items-center border-b border-[#ebf2ff] px-[320px] pt-12 pb-[49px]">
+      <span
+        v-for="item in promises"
+        :key="item.label"
+        class="site-footer__promise inline-flex flex-1 items-center justify-center gap-2 text-[16px] font-medium text-[#2d3760]"
+      >
+        <img class="site-footer__promise-icon block h-6 w-6" :src="item.icon" alt="" aria-hidden="true" />
         {{ item.label }}
       </span>
     </div>
 
-    <div class="site-footer__main">
-      <div class="site-footer__intro">
-        <img class="site-footer__logo" :src="originsCloudLogo" alt="Origins Cloud" />
-        <p>
+    <div class="site-footer__main flex h-[318px] px-[320px] pt-[60px]">
+      <div class="site-footer__intro w-[338px]">
+        <img class="site-footer__logo h-[36px] w-[239px]" :src="originsCloudLogo" alt="Origins Cloud" />
+        <p class="mt-6 w-[277px] text-[16px] leading-[1.45] font-[300] text-[#4e5969]">
           A global leading cloud computing service provider committed to making innovation accessible for every enterprise.
         </p>
       </div>
 
-      <div class="site-footer__columns">
-        <div v-for="column in footerColumns" :key="column.title" class="site-footer__column">
-          <h3>{{ column.title }}</h3>
-          <a v-for="link in column.links" :key="link" href="#">{{ link }}</a>
+      <div class="site-footer__columns ml-[50px] flex gap-[50px]">
+        <div
+          v-for="column in footerColumns"
+          :key="column.title"
+          class="site-footer__column flex min-w-[130px] flex-col gap-4"
+        >
+          <h3 class="mb-[2px] text-[14px] font-medium uppercase text-[#2d3760]">{{ column.title }}</h3>
+          <a
+            v-for="link in column.links"
+            :key="link"
+            href="#"
+            class="text-[14px] text-[#86909c] no-underline"
+          >
+            {{ link }}
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="site-footer__bottom">
-      <p>© 2016-2024 OrCloud www.originscloud.io.</p>
-      <div class="site-footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Legal Compliance</a>
-        <a href="#">Friendship Links</a>
+    <div class="site-footer__bottom flex h-[81px] items-center border-t border-[#ebf2ff] px-[338px]">
+      <p class="m-0 w-[336px] text-[12px] font-[300] text-[#86909c]">© 2016-2024 OrCloud www.originscloud.io.</p>
+      <div class="site-footer__legal ml-auto flex gap-8">
+        <a href="#" class="text-[12px] font-medium text-[#86909c] no-underline">Privacy Policy</a>
+        <a href="#" class="text-[12px] font-medium text-[#86909c] no-underline">Terms of Service</a>
+        <a href="#" class="text-[12px] font-medium text-[#86909c] no-underline">Legal Compliance</a>
+        <a href="#" class="text-[12px] font-medium text-[#86909c] no-underline">Friendship Links</a>
       </div>
     </div>
   </footer>
@@ -68,116 +83,3 @@ const footerColumns = [
   },
 ]
 </script>
-
-<style scoped>
-.site-footer {
-  width: 1920px;
-  height: 516px;
-  border-top: 1px solid rgba(226, 232, 240, 0.5);
-  background: #f8f8fa;
-}
-
-.site-footer__promises {
-  display: flex;
-  align-items: center;
-  height: 120px;
-  padding: 48px 320px 49px;
-  border-bottom: 1px solid #ebf2ff;
-}
-
-.site-footer__promise {
-  display: inline-flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: #2d3760;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.site-footer__promise-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-.site-footer__main {
-  display: flex;
-  height: 318px;
-  padding: 60px 320px 0;
-}
-
-.site-footer__intro {
-  width: 338px;
-}
-
-.site-footer__logo {
-  width: 239px;
-  height: 36px;
-}
-
-.site-footer__intro p {
-  width: 277px;
-  margin-top: 24px;
-  color: #4e5969;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.45;
-}
-
-.site-footer__columns {
-  display: flex;
-  gap: 50px;
-  margin-left: 50px;
-}
-
-.site-footer__column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  min-width: 130px;
-}
-
-.site-footer__column h3 {
-  margin: 0 0 2px;
-  color: #2d3760;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.site-footer__column a,
-.site-footer__bottom a {
-  color: #86909c;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.site-footer__bottom {
-  display: flex;
-  align-items: center;
-  height: 81px;
-  padding: 0 338px;
-  border-top: 1px solid #ebf2ff;
-}
-
-.site-footer__bottom p {
-  width: 336px;
-  margin: 0;
-  color: #86909c;
-  font-size: 12px;
-  font-weight: 300;
-}
-
-.site-footer__legal {
-  display: flex;
-  gap: 32px;
-  margin-left: auto;
-}
-
-.site-footer__legal a {
-  font-size: 12px;
-  font-weight: 500;
-}
-</style>

@@ -11,7 +11,7 @@
     <slot />
   </VScaleScreen>
 
-  <div v-else class="design-static-shell">
+  <div v-else class="mx-auto min-h-screen w-[1920px] bg-white">
     <slot />
   </div>
 </template>
@@ -36,7 +36,9 @@ const scaleWrapperStyle = {
 }
 
 function syncViewportWidth() {
-  viewportWidth.value = window.innerWidth
+  const layoutViewportWidth = document.documentElement.clientWidth || window.innerWidth
+  viewportWidth.value = layoutViewportWidth
+  document.documentElement.style.setProperty('--viewport-width', `${layoutViewportWidth}px`)
 }
 
 onMounted(() => {
@@ -48,12 +50,3 @@ onUnmounted(() => {
   window.removeEventListener('resize', syncViewportWidth)
 })
 </script>
-
-<style scoped>
-.design-static-shell {
-  width: 1920px;
-  min-height: 100vh;
-  margin: 0 auto;
-  background: #ffffff;
-}
-</style>

@@ -21,4 +21,17 @@ describe('PlansCarouselSection', () => {
 
     expect(wrapper.findComponent(FullBleedSection).exists()).toBe(true)
   })
+
+  it('marks internal content for sequential scroll reveal', () => {
+    const wrapper = mount(PlansCarouselSection)
+
+    expect(wrapper.find('h2').classes()).toContain('reveal-on-scroll')
+    expect(wrapper.find('p').classes()).toEqual(expect.arrayContaining(['reveal-on-scroll', 'reveal-delay-100']))
+    expect(wrapper.find('.plans-carousel-section__carousel').classes()).toEqual(
+      expect.arrayContaining(['reveal-on-scroll', 'reveal-delay-200']),
+    )
+    expect(wrapper.find('button[aria-label="More plans"]').classes()).toEqual(
+      expect.arrayContaining(['reveal-on-scroll', 'reveal-delay-300']),
+    )
+  })
 })

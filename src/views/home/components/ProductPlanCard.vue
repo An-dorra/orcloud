@@ -1,30 +1,36 @@
 <template>
   <article
-    class="plan-card"
-    :class="{
-      'plan-card--highlighted': isHighlighted,
-      'plan-card--motion-highlighted': isHighlighted,
-      'plan-card--centered': plan.contentAlign === 'center' && !isHighlighted,
-    }"
+    class="plan-card relative overflow-hidden rounded-[24px] border bg-white text-left"
+    :class="[
+      isHighlighted ? 'plan-card--highlighted plan-card--motion-highlighted z-[2]' : '',
+      plan.contentAlign === 'center' && !isHighlighted ? 'plan-card--centered mx-auto' : '',
+    ]"
     :style="cardStyle"
   >
-    <span v-if="isHighlighted && plan.featured" class="plan-card__badge">BEST SELLER</span>
-    <h3 class="plan-card__title plan-card__title--single-line plan-card__content-item plan-card__content-item--title">
+    <div class="pointer-events-none absolute inset-0 rounded-[inherit]" :style="surfaceStyle" />
+    <span
+      v-if="isHighlighted && plan.featured"
+      class="plan-card__badge absolute top-[-1px] right-[-1px] z-[2] rounded-tr-[24px] rounded-bl-[8px] bg-[#0168f0] px-6 py-[10px] pl-5 text-[18px] leading-[15px] font-semibold text-white"
+    >
+      BEST SELLER
+    </span>
+
+    <h3 class="plan-card__title plan-card__title--single-line plan-card__content-item plan-card__content-item--title relative z-[1] m-0 whitespace-nowrap text-left font-semibold text-[#1a1c1c]" :style="titleStyle">
       {{ plan.title }}
     </h3>
-    <p
-      class="plan-card__description plan-card__content-item plan-card__content-item--description"
-      :style="descriptionStyle"
-    >
+
+    <p class="plan-card__description plan-card__content-item plan-card__content-item--description relative z-[1] mt-0 whitespace-pre-line text-left font-[300] text-[#4e5969]" :style="descriptionStyle">
       {{ plan.description }}
     </p>
+
     <ul
-      class="plan-card__content-item plan-card__content-item--specs"
+      class="plan-card__content-item plan-card__content-item--specs relative z-[1] m-0 flex list-none flex-col p-0"
       :class="{ 'plan-card__specs--highlighted': isHighlighted }"
+      :style="specsListStyle"
     >
-      <li v-for="(spec, index) in plan.specs" :key="spec">
+      <li v-for="(spec, index) in plan.specs" :key="spec" class="flex items-center gap-2 text-[#1d2129]" :style="specItemStyle">
         <img
-          class="plan-card__check"
+          class="plan-card__check block h-[15px] w-[15px]"
           :src="plan.featured && index === 1 ? iconSpecCheckAlt : iconSpecCheck"
           alt=""
           aria-hidden="true"
@@ -32,16 +38,18 @@
         {{ spec }}
       </li>
     </ul>
-    <div class="plan-card__divider plan-card__content-item plan-card__content-item--divider">
-      <img :src="isHighlighted ? iconPlanDividerFeatured : iconPlanDivider" alt="" aria-hidden="true" />
+
+    <div class="plan-card__divider plan-card__content-item plan-card__content-item--divider relative z-[1] mt-0" :style="dividerWrapStyle">
+      <img class="block h-px w-full" :src="isHighlighted ? iconPlanDividerFeatured : iconPlanDivider" alt="" aria-hidden="true" />
     </div>
-    <div class="plan-card__footer plan-card__content-item plan-card__content-item--footer">
-      <div class="plan-card__price">
-        <p class="plan-card__label">Starting from</p>
-        <strong>{{ plan.price }}</strong>
-        <span>{{ plan.period }}</span>
+
+    <div class="plan-card__footer plan-card__content-item plan-card__content-item--footer relative z-[1] mt-0 flex items-end justify-between" :style="footerStyle">
+      <div class="plan-card__price w-fit leading-none">
+        <p class="plan-card__label m-0 mb-2 text-[#86909c]" :style="labelStyle">Starting from</p>
+        <strong class="inline-block text-[#0168f0]" :style="priceStyle">{{ plan.price }}</strong>
+        <span class="inline-block align-bottom font-medium text-[#86909c]" :style="periodStyle">{{ plan.period }}</span>
       </div>
-      <button type="button">Buy Now</button>
+      <button class="border-0 font-semibold text-white" type="button" :style="buttonStyle">Buy Now</button>
     </div>
   </article>
 </template>
@@ -61,321 +69,106 @@ const props = defineProps<{
 }>()
 
 const isHighlighted = computed(() => props.highlighted ?? props.plan.featured ?? false)
+const isCentered = computed(() => props.plan.contentAlign === 'center' && !isHighlighted.value)
+
+const contentWidth = computed(() => {
+  if (isHighlighted.value) {
+    return 346
+  }
+
+  if (isCentered.value) {
+    return 356
+  }
+
+  return 334
+})
+
+const contentTopSpacing = computed(() => (isHighlighted.value ? 36 : 28))
+
 const cardStyle = computed(() => {
   const resolvedHeight = isHighlighted.value ? props.plan.highlightedCardHeight ?? 475 : props.plan.cardHeight
 
-  return resolvedHeight ? { height: `${resolvedHeight}px` } : undefined
+  return {
+    width: `${isHighlighted.value ? 440 : 420}px`,
+    minHeight: `${isHighlighted.value ? 475 : 422}px`,
+    height: resolvedHeight ? `${resolvedHeight}px` : undefined,
+    padding: isHighlighted.value ? '40px 40px 44px' : '40px 32px 44px',
+    borderColor: isHighlighted.value ? '#0d59ff' : '#e6e6e6',
+    boxShadow: isHighlighted.value
+      ? '0 24px 50px rgba(8, 23, 54, 0.14), 0 8px 22px rgba(13, 89, 255, 0.12)'
+      : '0 0 20px rgba(0, 0, 0, 0.1)',
+    transform: isHighlighted.value ? 'translateY(-10px)' : undefined,
+    transition:
+      'width 220ms ease, min-height 220ms ease, padding 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 420ms cubic-bezier(0.22, 1, 0.36, 1)',
+  }
 })
-const descriptionStyle = computed(() => (props.plan.descriptionWidth ? { width: `${props.plan.descriptionWidth}px` } : undefined))
-</script>
 
-<style scoped>
-.plan-card {
-  position: relative;
-  width: 420px;
-  min-height: 422px;
-  padding: 40px 32px 44px;
-  border: 1px solid #e6e6e6;
-  border-radius: 24px;
-  background: #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition:
-    width 220ms ease,
-    min-height 220ms ease,
-    padding 220ms ease,
-    border-color 220ms ease,
-    box-shadow 220ms ease,
-    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
-  text-align: left;
-}
-
-.plan-card--highlighted {
-  z-index: 2;
-  width: 440px;
-  min-height: 475px;
-  padding: 40px 40px 44px;
-  border-color: #0d59ff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-}
-
-.plan-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
+const surfaceStyle = computed(() => ({
+  opacity: isHighlighted.value ? 1 : 0,
   background:
-    radial-gradient(circle at 50% -8%, rgba(93, 157, 255, 0.18), transparent 42%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0));
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 420ms ease;
-}
+    'radial-gradient(circle at 50% -8%, rgba(93, 157, 255, 0.18), transparent 42%), linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0))',
+  transition: 'opacity 420ms ease',
+}))
 
-.plan-card--motion-highlighted {
-  transform: translateY(-10px);
-  box-shadow:
-    0 24px 50px rgba(8, 23, 54, 0.14),
-    0 8px 22px rgba(13, 89, 255, 0.12);
-}
+const titleStyle = computed(() => ({
+  width: `${contentWidth.value}px`,
+  fontSize: isHighlighted.value ? '36px' : '32px',
+  lineHeight: isHighlighted.value ? '44px' : '39px',
+}))
 
-.plan-card--motion-highlighted::before {
-  opacity: 1;
-}
+const descriptionStyle = computed(() => ({
+  width: `${props.plan.descriptionWidth ?? contentWidth.value}px`,
+  minHeight: '44px',
+  marginTop: `${contentTopSpacing.value}px`,
+  fontSize: isHighlighted.value ? '20px' : '18px',
+  lineHeight: isHighlighted.value ? '27px' : '22px',
+}))
 
-.plan-card__badge {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  padding: 10px 24px 10px 20px;
-  border-top-right-radius: 24px;
-  border-bottom-left-radius: 8px;
-  background: #0168f0;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 15px;
-}
+const specsListStyle = computed(() => ({
+  width: `${contentWidth.value}px`,
+  gap: '12px',
+  marginTop: `${contentTopSpacing.value}px`,
+}))
 
-.plan-card__title {
-  margin: 0;
-  color: #1a1c1c;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 39px;
-  width: 334px;
-  text-align: left;
-}
+const specItemStyle = computed(() => ({
+  fontSize: isHighlighted.value ? '18px' : '16px',
+  fontWeight: isHighlighted.value ? 400 : 300,
+  lineHeight: isHighlighted.value ? '22px' : '20px',
+}))
 
-.plan-card__title--single-line {
-  white-space: nowrap;
-}
+const dividerWrapStyle = computed(() => ({
+  width: `${contentWidth.value}px`,
+  marginTop: `${contentTopSpacing.value}px`,
+}))
 
-.plan-card--highlighted .plan-card__title {
-  width: 346px;
-  font-size: 36px;
-  line-height: 44px;
-}
+const footerStyle = computed(() => ({
+  width: `${contentWidth.value}px`,
+  marginTop: `${contentTopSpacing.value}px`,
+}))
 
-.plan-card--centered:not(.plan-card--highlighted) .plan-card__title {
-  width: 356px;
-}
+const labelStyle = computed(() => ({
+  fontSize: isHighlighted.value ? '14px' : '12px',
+  lineHeight: isHighlighted.value ? '17px' : '24px',
+}))
 
-.plan-card__description {
-  width: 334px;
-  min-height: 44px;
-  margin: 28px 0 0;
-  color: #4e5969;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 22px;
-  text-align: left;
-  white-space: pre-line;
-}
+const priceStyle = computed(() => ({
+  fontSize: isHighlighted.value ? '36px' : '32px',
+  fontWeight: 700,
+  lineHeight: isHighlighted.value ? '36px' : '32px',
+}))
 
-.plan-card__content-item {
-  position: relative;
-  z-index: 1;
-}
+const periodStyle = computed(() => ({
+  fontSize: isHighlighted.value ? '16px' : '14px',
+  lineHeight: isHighlighted.value ? '25px' : '20px',
+}))
 
-.plan-card--motion-highlighted .plan-card__content-item {
-  animation: plan-card-content-rise 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.plan-card--motion-highlighted .plan-card__content-item--title {
-  animation-delay: 40ms;
-}
-
-.plan-card--motion-highlighted .plan-card__content-item--description {
-  animation-delay: 100ms;
-}
-
-.plan-card--motion-highlighted .plan-card__content-item--specs {
-  animation-delay: 160ms;
-}
-
-.plan-card--motion-highlighted .plan-card__content-item--divider {
-  animation-delay: 220ms;
-}
-
-.plan-card--motion-highlighted .plan-card__content-item--footer {
-  animation-delay: 260ms;
-}
-
-.plan-card--highlighted .plan-card__description {
-  width: 346px;
-  font-size: 20px;
-  margin-top: 36px;
-  line-height: 27px;
-}
-
-.plan-card--centered:not(.plan-card--highlighted) .plan-card__description {
-  width: 356px;
-}
-
-.plan-card ul {
-  width: 334px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.plan-card--highlighted ul {
-  width: 346px;
-  margin-top: 36px;
-}
-
-.plan-card li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #1d2129;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 20px;
-}
-
-.plan-card__specs--highlighted li {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.plan-card__check {
-  width: 15px;
-  height: 15px;
-  display: block;
-}
-
-.plan-card__divider {
-  width: 334px;
-  margin-top: 28px;
-}
-
-.plan-card--centered:not(.plan-card--highlighted) .plan-card__divider {
-  width: 356px;
-}
-
-.plan-card--highlighted .plan-card__divider {
-  width: 346px;
-  margin-top: 36px;
-}
-
-.plan-card__divider img {
-  width: 100%;
-  height: 1px;
-  display: block;
-}
-
-.plan-card__footer {
-  width: 334px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-top: 28px;
-}
-
-.plan-card__price {
-  width: fit-content;
-  line-height: 0;
-}
-
-.plan-card--centered:not(.plan-card--highlighted) .plan-card__footer {
-  width: 356px;
-}
-
-.plan-card--highlighted .plan-card__footer {
-  width: 346px;
-  margin-top: 36px;
-}
-.plan-card__label {
-  margin: 0 0 8px;
-  color: #86909c;
-  font-size: 12px;
-  line-height: 24px;
-}
-
-.plan-card--highlighted .plan-card__label {
-  font-size: 14px;
-  line-height: 17px;
-}
-
-.plan-card strong {
-  display: inline-block;
-  color: #0168f0;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-.plan-card--highlighted strong {
-  font-size: 36px;
-  line-height: 36px;
-}
-
-.plan-card__price span {
-  display: inline-block;
-  color: #86909c;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  vertical-align: bottom;
-}
-
-.plan-card--highlighted .plan-card__price span {
-  font-size: 16px;
-  line-height: 25px;
-}
-
-.plan-card button {
-  width: 120px;
-  height: 40px;
-  border: 0;
-  border-radius: 8px;
-  background: #1d2129;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  transition:
-    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 420ms ease;
-}
-
-.plan-card--highlighted button {
-  width: 130px;
-  height: 44px;
-  background: linear-gradient(180deg, #0168f0 0%, #5d9dff 100%);
-  font-size: 18px;
-  box-shadow: 0 12px 24px rgba(1, 104, 240, 0.2);
-}
-
-.plan-card--motion-highlighted button {
-  animation: plan-card-cta-breathe 2200ms ease-in-out 360ms infinite;
-}
-
-@keyframes plan-card-content-rise {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes plan-card-cta-breathe {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-2px);
-  }
-}
-</style>
+const buttonStyle = computed(() => ({
+  width: `${isHighlighted.value ? 130 : 120}px`,
+  height: `${isHighlighted.value ? 44 : 40}px`,
+  borderRadius: '8px',
+  fontSize: `${isHighlighted.value ? 18 : 16}px`,
+  background: isHighlighted.value ? 'linear-gradient(180deg, #0168f0 0%, #5d9dff 100%)' : '#1d2129',
+  boxShadow: isHighlighted.value ? '0 12px 24px rgba(1, 104, 240, 0.2)' : undefined,
+  transition: 'transform 420ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 420ms ease',
+}))
+</script>

@@ -164,9 +164,21 @@ export const marketplaceServices = [
     icon: iconMarketServiceOps,
     active: true,
   },
-  { title: 'Data Processing', icon: iconMarketServiceData },
-  { title: 'Website Building', icon: iconMarketServiceBuild },
-  { title: '400 Phone Service', icon: iconMarketServicePhone },
+  {
+    title: 'Data Processing',
+    description: 'Scalable solutions for big data pipelines and real-time analytics.',
+    icon: iconMarketServiceData,
+  },
+  {
+    title: 'Website Building',
+    description: 'No-code tools and enterprise CMS deployment.',
+    icon: iconMarketServiceBuild,
+  },
+  {
+    title: '400 Phone Service',
+    description: 'NO.1 connects customers; 400 hotline makes communication more professional.',
+    icon: iconMarketServicePhone,
+  },
 ]
 
 export const stats = [

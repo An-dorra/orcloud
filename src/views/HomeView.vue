@@ -206,26 +206,7 @@
       </div>
     </section>
 
-    <FullBleedSection class="bg-[#1d2129]" content-class="relative h-[485px] overflow-hidden">
-      <img class="absolute top-[-237px] left-[883px] h-[1159px] w-[1159px]" :src="orclawRingBackground" alt="" />
-      <div class="reveal-on-scroll reveal-delay-300 absolute top-[82px] right-[147px] h-[495px] w-[682px]">
-        <div class="h-full w-full rotate-[-21deg]">
-          <OrclawCrab class="h-full w-full" />
-        </div>
-      </div>
-      <div class="orclaw-copy absolute top-[82px] left-[120px] text-white">
-        <h2 class="reveal-on-scroll m-0 text-[56px] leading-[1.22] font-bold">Meet "OrClaw"<br />Your Personal AI Assistant</h2>
-        <p class="reveal-on-scroll reveal-delay-100 mt-7 w-[666px] text-[26px] leading-[1.22] font-[300] text-[rgba(255,255,255,0.6)]">
-          Intelligent resource management, troubleshooting, and cloud optimization at your fingertips.
-        </p>
-        <a
-          href="#"
-          class="reveal-on-scroll reveal-delay-200 mt-[58px] inline-flex h-10 min-w-[150px] items-center justify-center rounded-[400px] bg-[#0168f0] px-[30px] text-[16px] font-semibold text-white no-underline"
-        >
-          Click to jump →
-        </a>
-      </div>
-    </FullBleedSection>
+    <OrclawCtaSection />
   </div>
 </template>
 
@@ -236,7 +217,6 @@ import FullBleedSection from '@/components/layout/FullBleedSection.vue'
 import globalNetworkMap from '@/assets/images/global-network-map.svg'
 import heroCloudInfrastructure from '@/assets/images/hero-cloud-infrastructure.jpg'
 import marketplaceCloudEcosystem from '@/assets/images/marketplace-cloud-ecosystem.png'
-import orclawRingBackground from '@/assets/images/orclaw-ring-background.svg'
 import buttonMorePill from '@/assets/icons/button-more-pill.png'
 import iconChevronRight from '@/assets/icons/icon-chevron-right.svg'
 import iconMoreArrow from '@/assets/icons/icon-more-arrow.svg'
@@ -247,9 +227,9 @@ import {
   stats,
   valueCards,
 } from '@/data/home'
+import OrclawCtaSection from '@/components/sections/OrclawCtaSection.vue'
 import IndustriesAccordionSection from '@/views/home/components/IndustriesAccordionSection.vue'
 import NewsCard from '@/views/home/components/NewsCard.vue'
-import OrclawCrab from '@/views/home/components/OrclawCrab.vue'
 import PlansCarouselSection from '@/views/home/components/PlansCarouselSection.vue'
 
 const MARKETPLACE_SERVICE_INTERVAL = 3000

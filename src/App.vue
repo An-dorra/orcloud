@@ -1,13 +1,15 @@
 <template>
-  <DesignScaler>
-    <div class="min-h-screen w-[1920px] bg-white">
-      <SiteHeader />
-      <main>
-        <RouterView />
-      </main>
-      <SiteFooter />
-    </div>
-  </DesignScaler>
+  <div class="app-shell min-h-screen bg-white">
+    <SiteHeader />
+    <DesignScaler>
+      <div class="min-h-screen w-[1920px] bg-white">
+        <main class="pt-20">
+          <RouterView />
+        </main>
+        <SiteFooter />
+      </div>
+    </DesignScaler>
+  </div>
 </template>
 
 <script setup lang="ts">

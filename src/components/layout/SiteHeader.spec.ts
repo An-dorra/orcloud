@@ -16,6 +16,7 @@ const createTestRouter = async () => {
       { path: '/service-guarantee', component: { template: '<div />' } },
       { path: '/trust-center', component: { template: '<div />' } },
       { path: '/data-center', component: { template: '<div />' } },
+      { path: '/console', component: { template: '<div />' } },
       { path: '/about', component: { template: '<div />' } },
     ],
   })
@@ -85,5 +86,13 @@ describe('SiteHeader', () => {
     expect(dropdown.classes()).toContain('opacity-100')
     expect(wrapper.text()).toContain('Cloud Servers')
     expect(wrapper.text()).toContain('Domain Registration')
+  })
+
+  it('links the console action to the console dashboard', async () => {
+    const { wrapper } = await mountHeader()
+
+    const consoleLink = wrapper.findAll('.site-header__plain-link').find((link) => link.text() === 'Console')
+
+    expect(consoleLink?.attributes('href')).toBe('/console')
   })
 })

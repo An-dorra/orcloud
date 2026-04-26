@@ -1,0 +1,237 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Origins Cloud home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Origins Cloud" [ref=e7]
+      - navigation "Primary navigation" [ref=e8]:
+        - link "Product Center" [ref=e10] [cursor=pointer]:
+          - /url: /product-center
+          - text: Product Center
+          - img [ref=e12]
+        - link "Service Guarantee" [ref=e15] [cursor=pointer]:
+          - /url: /service-guarantee
+          - text: Service Guarantee
+          - img [ref=e17]
+        - link "Solutions" [ref=e20] [cursor=pointer]:
+          - /url: /
+          - text: Solutions
+          - img [ref=e22]
+        - link "Ecological Cooperation" [ref=e25] [cursor=pointer]:
+          - /url: /
+          - text: Ecological Cooperation
+          - img [ref=e27]
+        - link "About Us" [ref=e30] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+          - img [ref=e32]
+      - generic "Account links" [ref=e34]:
+        - button "Language" [ref=e35]:
+          - img [ref=e36]
+        - button "App menu" [ref=e37]:
+          - img [ref=e38]
+        - img [ref=e39]
+        - link "Console" [ref=e40] [cursor=pointer]:
+          - /url: /
+        - link "Login" [ref=e41] [cursor=pointer]:
+          - /url: /
+        - link "Register" [ref=e42] [cursor=pointer]:
+          - /url: /
+      - generic:
+        - generic:
+          - generic:
+            - link "Cloud Servers":
+              - /url: /product-center
+            - link "Domain Registration":
+              - /url: /domain-registration
+      - generic:
+        - generic:
+          - generic:
+            - button "Service Guarantee":
+              - generic: Service Guarantee
+            - button "Official Announcement":
+              - generic: Official Announcement
+          - generic:
+            - generic:
+              - link "Service Guarantee":
+                - /url: /service-guarantee
+              - link "Trust Center":
+                - /url: /trust-center
+              - link "Data Center":
+                - /url: /data-center
+              - link "VIP Member Service":
+                - /url: /vip-member-service
+      - generic:
+        - generic:
+          - generic:
+            - button "General Solution":
+              - generic: General Solution
+            - button "Industry Solutions":
+              - generic: Industry Solutions
+          - generic:
+            - generic:
+              - link "Cloud Server Deployment":
+                - /url: /
+              - link "Highly Available Architecture":
+                - /url: /
+              - link "Data Backup and Recovery":
+                - /url: /
+              - link "Safety Protection":
+                - /url: /
+              - link "Flexible Expansion":
+                - /url: /
+              - link "Automated Deployment":
+                - /url: /
+  - generic [ref=e45]:
+    - main [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e50]:
+          - heading "Official Announcements" [level=1] [ref=e51]
+          - paragraph [ref=e52]: Real-time updates and the latest news about Origins Cloud services. Striving for absolute transparency in cloud infrastructure.
+        - generic [ref=e53]:
+          - generic [ref=e55]:
+            - button "Latest Notices" [ref=e56]
+            - button "After-Sales Services" [ref=e57]
+            - button "Update Announcements" [ref=e58]
+            - button "Technical Documentation" [ref=e59]
+          - generic [ref=e60]:
+            - link "01 APR 2026 102 Key Enterprises Settle in Hong Kong, Over 40 Focus on AI Driving Job Growth Latest Notices" [ref=e61] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e62]:
+                - generic [ref=e63]: "01"
+                - generic [ref=e64]: APR 2026
+              - generic [ref=e65]:
+                - heading "102 Key Enterprises Settle in Hong Kong, Over 40 Focus on AI Driving Job Growth" [level=3] [ref=e66]
+                - generic [ref=e68]: Latest Notices
+              - img [ref=e70]
+            - link "01 APR 2026 Policy Support Accelerates Global Expansion of Domestic Large Models Latest Notices" [ref=e72] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e73]:
+                - generic [ref=e74]: "01"
+                - generic [ref=e75]: APR 2026
+              - generic [ref=e76]:
+                - heading "Policy Support Accelerates Global Expansion of Domestic Large Models" [level=3] [ref=e77]
+                - generic [ref=e79]: Latest Notices
+              - img [ref=e81]
+            - link "01 APR 2026 Hong Kong and the Greater Bay Area Collaborate to Build AI Talent Systems Latest Notices" [ref=e83] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e84]:
+                - generic [ref=e85]: "01"
+                - generic [ref=e86]: APR 2026
+              - generic [ref=e87]:
+                - heading "Hong Kong and the Greater Bay Area Collaborate to Build AI Talent Systems" [level=3] [ref=e88]
+                - generic [ref=e90]: Latest Notices
+              - img [ref=e92]
+            - link "01 APR 2026 Cloud Providers in HK/GBA Collaborate on Cross-Border Infrastructure Latest Notices" [ref=e94] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e95]:
+                - generic [ref=e96]: "01"
+                - generic [ref=e97]: APR 2026
+              - generic [ref=e98]:
+                - heading "Cloud Providers in HK/GBA Collaborate on Cross-Border Infrastructure" [level=3] [ref=e99]
+                - generic [ref=e101]: Latest Notices
+              - img [ref=e103]
+            - link "01 APR 2026 Tongyi Qianwen Tops Global Open-Source Downloads, Overseas Usage Exceeds 30% Latest Notices" [ref=e105] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e106]:
+                - generic [ref=e107]: "01"
+                - generic [ref=e108]: APR 2026
+              - generic [ref=e109]:
+                - heading "Tongyi Qianwen Tops Global Open-Source Downloads, Overseas Usage Exceeds 30%" [level=3] [ref=e110]
+                - generic [ref=e112]: Latest Notices
+              - img [ref=e114]
+          - generic [ref=e116]:
+            - button "Previous page" [ref=e117]:
+              - img [ref=e118]
+            - button "1" [ref=e119]
+            - button "2" [ref=e120]
+            - button "3" [ref=e121]
+            - generic [ref=e122]: ...
+            - button "99" [ref=e123]
+            - button "Next page" [ref=e124]:
+              - img [ref=e125]
+        - generic [ref=e127]:
+          - img [ref=e131]
+          - generic [ref=e157]:
+            - heading "Meet \"OrClaw\" Your Personal AI Assistant" [level=2] [ref=e158]:
+              - text: Meet "OrClaw"
+              - text: Your Personal AI Assistant
+            - paragraph [ref=e159]: Intelligent resource management, troubleshooting, and cloud optimization at your fingertips.
+            - link "Click to jump →" [ref=e160] [cursor=pointer]:
+              - /url: "#"
+    - contentinfo [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - img [ref=e164]
+          - text: 5-Day Refund
+        - generic [ref=e165]:
+          - img [ref=e166]
+          - text: No Filing Required
+        - generic [ref=e167]:
+          - img [ref=e168]
+          - text: VIP Service
+        - generic [ref=e169]:
+          - img [ref=e170]
+          - text: 24*7 Support
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - img "Origins Cloud" [ref=e173]
+          - paragraph [ref=e174]: A global leading cloud computing service provider committed to making innovation accessible for every enterprise.
+        - generic [ref=e175]:
+          - generic [ref=e176]:
+            - heading "Hot Products" [level=3] [ref=e177]
+            - link "Cloud Server" [ref=e178] [cursor=pointer]:
+              - /url: "#"
+            - link "Bare Metal Server" [ref=e179] [cursor=pointer]:
+              - /url: "#"
+            - link "IDC Colocation" [ref=e180] [cursor=pointer]:
+              - /url: "#"
+            - link "Domain Name Registration" [ref=e181] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e182]:
+            - heading "Solutions" [level=3] [ref=e183]
+            - link "Website Solutions" [ref=e184] [cursor=pointer]:
+              - /url: "#"
+            - link "Gaming Solutions" [ref=e185] [cursor=pointer]:
+              - /url: "#"
+            - link "Financial Solutions" [ref=e186] [cursor=pointer]:
+              - /url: "#"
+            - link "E-commerce Solutions" [ref=e187] [cursor=pointer]:
+              - /url: "#"
+            - link "Mobile Solutions" [ref=e188] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e189]:
+            - heading "Ecosystem Partnership" [level=3] [ref=e190]
+            - link "Partners" [ref=e191] [cursor=pointer]:
+              - /url: "#"
+            - link "CPS Promotion" [ref=e192] [cursor=pointer]:
+              - /url: "#"
+            - link "Official Announcements" [ref=e193] [cursor=pointer]:
+              - /url: "#"
+            - link "Contact Us" [ref=e194] [cursor=pointer]:
+              - /url: "#"
+            - link "Product Center" [ref=e195] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e196]:
+            - heading "Origin Cloud Products" [level=3] [ref=e197]
+            - link "Control Center" [ref=e198] [cursor=pointer]:
+              - /url: "#"
+            - link "Security Center" [ref=e199] [cursor=pointer]:
+              - /url: "#"
+            - link "Resource Center" [ref=e200] [cursor=pointer]:
+              - /url: "#"
+            - link "Finance Center" [ref=e201] [cursor=pointer]:
+              - /url: "#"
+            - link "Account Management" [ref=e202] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e203]:
+        - paragraph [ref=e204]: © 2016-2024 OrCloud www.originscloud.io.
+        - generic [ref=e205]:
+          - link "Privacy Policy" [ref=e206] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Service" [ref=e207] [cursor=pointer]:
+            - /url: "#"
+          - link "Legal Compliance" [ref=e208] [cursor=pointer]:
+            - /url: "#"
+          - link "Friendship Links" [ref=e209] [cursor=pointer]:
+            - /url: "#"

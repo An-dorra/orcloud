@@ -137,13 +137,13 @@ export const vipRefundProcessSteps: VipRefundProcessStep[] = [
     title: 'VERIFY',
   },
   {
-    iconSrc: approveStepIcon,
-    title: 'APPROVE',
-  },
-  {
     iconSrc: refundedStepIcon,
     title: 'REFUNDED',
     highlighted: true,
+  },
+  {
+    iconSrc: approveStepIcon,
+    title: 'APPROVE',
   },
 ]
 

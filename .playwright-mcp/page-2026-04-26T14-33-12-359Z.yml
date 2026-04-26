@@ -1,0 +1,197 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - link "Origins Cloud" [ref=e6] [cursor=pointer]:
+      - /url: /console
+      - img "Origins Cloud" [ref=e7]
+    - navigation [ref=e8]:
+      - link "Order Products" [ref=e9] [cursor=pointer]:
+        - /url: /console/orders
+        - img [ref=e10]
+        - generic [ref=e13]: Order Products
+      - link "My Products" [ref=e14] [cursor=pointer]:
+        - /url: /console/products
+        - img [ref=e15]
+        - generic [ref=e25]: My Products
+      - link "Account Information" [ref=e26] [cursor=pointer]:
+        - /url: /console/account
+        - img [ref=e27]
+        - generic [ref=e39]: Account Information
+      - link "Financial Information" [ref=e40] [cursor=pointer]:
+        - /url: /console/finance
+        - img [ref=e41]
+        - generic [ref=e45]: Financial Information
+      - link "Security Center" [ref=e46] [cursor=pointer]:
+        - /url: /console/security
+        - img [ref=e47]
+        - generic [ref=e50]: Security Center
+      - link "Resource Center" [ref=e51] [cursor=pointer]:
+        - /url: /console/resources
+        - img [ref=e52]
+        - generic [ref=e62]: Resource Center
+      - link "Ticket Center" [ref=e63] [cursor=pointer]:
+        - /url: /console/tickets
+        - img [ref=e64]
+        - generic [ref=e66]: Ticket Center
+      - link "Sub-account Management" [ref=e67] [cursor=pointer]:
+        - /url: /console/sub-accounts
+        - img [ref=e68]
+        - generic [ref=e79]: Sub-account Management
+    - navigation [ref=e80]:
+      - link "Shopping Cart" [ref=e81] [cursor=pointer]:
+        - /url: /console/cart
+        - img [ref=e82]
+        - generic [ref=e86]: Shopping Cart
+      - link "Language" [ref=e87] [cursor=pointer]:
+        - /url: /console/language
+        - img [ref=e88]
+        - generic [ref=e92]: Language
+    - generic [ref=e94]:
+      - generic [ref=e95]: S
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: Alex Sterling
+        - paragraph [ref=e98]: ID:123456
+      - button "User menu" [ref=e99] [cursor=pointer]:
+        - img [ref=e101]
+  - main [ref=e105]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Management Console
+        - heading "Account Settings" [level=1] [ref=e110]
+      - tablist [ref=e115]:
+        - tab "Summary" [ref=e117]
+        - tab "Operation Log" [active] [selected] [ref=e118] [cursor=pointer]
+      - generic [ref=e231]:
+        - generic [ref=e232]:
+          - textbox "Please enter what you need to search for" [ref=e235]
+          - button "Search" [ref=e236] [cursor=pointer]:
+            - generic [ref=e237]: Search
+        - generic [ref=e239]:
+          - table [ref=e241]:
+            - rowgroup [ref=e247]:
+              - row "ID Describe Creation Time IP" [ref=e248]:
+                - columnheader "ID" [ref=e249]:
+                  - generic [ref=e250]: ID
+                - columnheader "Describe" [ref=e251]:
+                  - generic [ref=e252]: Describe
+                - columnheader "Creation Time" [ref=e253]:
+                  - generic [ref=e254]: Creation Time
+                - columnheader "IP" [ref=e255]:
+                  - generic [ref=e256]: IP
+          - table [ref=e261]:
+            - rowgroup [ref=e267]:
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e268]:
+                - cell "406" [ref=e269]:
+                  - generic [ref=e270]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e271]:
+                  - generic [ref=e272]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e273]:
+                  - generic [ref=e274]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e275]:
+                  - generic [ref=e276]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e277]:
+                - cell "406" [ref=e278]:
+                  - generic [ref=e279]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e280]:
+                  - generic [ref=e281]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e282]:
+                  - generic [ref=e283]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e284]:
+                  - generic [ref=e285]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e286]:
+                - cell "406" [ref=e287]:
+                  - generic [ref=e288]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e289]:
+                  - generic [ref=e290]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e291]:
+                  - generic [ref=e292]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e293]:
+                  - generic [ref=e294]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e295]:
+                - cell "406" [ref=e296]:
+                  - generic [ref=e297]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e298]:
+                  - generic [ref=e299]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e300]:
+                  - generic [ref=e301]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e302]:
+                  - generic [ref=e303]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e304]:
+                - cell "406" [ref=e305]:
+                  - generic [ref=e306]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e307]:
+                  - generic [ref=e308]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e309]:
+                  - generic [ref=e310]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e311]:
+                  - generic [ref=e312]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e313]:
+                - cell "406" [ref=e314]:
+                  - generic [ref=e315]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e316]:
+                  - generic [ref=e317]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e318]:
+                  - generic [ref=e319]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e320]:
+                  - generic [ref=e321]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e322]:
+                - cell "406" [ref=e323]:
+                  - generic [ref=e324]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e325]:
+                  - generic [ref=e326]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e327]:
+                  - generic [ref=e328]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e329]:
+                  - generic [ref=e330]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e331]:
+                - cell "406" [ref=e332]:
+                  - generic [ref=e333]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e334]:
+                  - generic [ref=e335]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e336]:
+                  - generic [ref=e337]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e338]:
+                  - generic [ref=e339]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e340]:
+                - cell "406" [ref=e341]:
+                  - generic [ref=e342]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e343]:
+                  - generic [ref=e344]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e345]:
+                  - generic [ref=e346]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e347]:
+                  - generic [ref=e348]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e349]:
+                - cell "406" [ref=e350]:
+                  - generic [ref=e351]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e352]:
+                  - generic [ref=e353]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e354]:
+                  - generic [ref=e355]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e356]:
+                  - generic [ref=e357]: 172.70.208.80:13292
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292" [ref=e358]:
+                - cell "406" [ref=e359]:
+                  - generic [ref=e360]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e361]:
+                  - generic [ref=e362]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e363]:
+                  - generic [ref=e364]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e365]:
+                  - generic [ref=e366]: 172.70.208.80:13292
+        - generic [ref=e368]:
+          - button "Go to previous page" [disabled] [ref=e369]:
+            - generic:
+              - img
+          - list [ref=e370]:
+            - listitem "page 1" [ref=e371]: "1"
+            - listitem "page 2" [ref=e372] [cursor=pointer]: "2"
+            - listitem "page 3" [ref=e373] [cursor=pointer]: "3"
+            - listitem "page 4" [ref=e374] [cursor=pointer]: "4"
+            - listitem "page 5" [ref=e375] [cursor=pointer]: "5"
+            - listitem "page 6" [ref=e376] [cursor=pointer]: "6"
+            - listitem "Next 5 pages" [ref=e377] [cursor=pointer]:
+              - img
+            - listitem "page 9" [ref=e378] [cursor=pointer]: "9"
+          - button "Go to next page" [ref=e379] [cursor=pointer]:
+            - generic:
+              - img

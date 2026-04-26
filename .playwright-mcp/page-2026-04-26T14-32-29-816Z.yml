@@ -1,0 +1,136 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - link "Origins Cloud" [ref=e6] [cursor=pointer]:
+      - /url: /console
+      - img "Origins Cloud" [ref=e7]
+    - navigation [ref=e8]:
+      - link "Order Products" [ref=e9] [cursor=pointer]:
+        - /url: /console/orders
+        - img [ref=e10]
+        - generic [ref=e13]: Order Products
+      - link "My Products" [ref=e14] [cursor=pointer]:
+        - /url: /console/products
+        - img [ref=e15]
+        - generic [ref=e25]: My Products
+      - link "Account Information" [ref=e26] [cursor=pointer]:
+        - /url: /console/account
+        - img [ref=e27]
+        - generic [ref=e39]: Account Information
+      - link "Financial Information" [ref=e40] [cursor=pointer]:
+        - /url: /console/finance
+        - img [ref=e41]
+        - generic [ref=e45]: Financial Information
+      - link "Security Center" [ref=e46] [cursor=pointer]:
+        - /url: /console/security
+        - img [ref=e47]
+        - generic [ref=e50]: Security Center
+      - link "Resource Center" [ref=e51] [cursor=pointer]:
+        - /url: /console/resources
+        - img [ref=e52]
+        - generic [ref=e62]: Resource Center
+      - link "Ticket Center" [ref=e63] [cursor=pointer]:
+        - /url: /console/tickets
+        - img [ref=e64]
+        - generic [ref=e66]: Ticket Center
+      - link "Sub-account Management" [ref=e67] [cursor=pointer]:
+        - /url: /console/sub-accounts
+        - img [ref=e68]
+        - generic [ref=e79]: Sub-account Management
+    - navigation [ref=e80]:
+      - link "Shopping Cart" [ref=e81] [cursor=pointer]:
+        - /url: /console/cart
+        - img [ref=e82]
+        - generic [ref=e86]: Shopping Cart
+      - link "Language" [ref=e87] [cursor=pointer]:
+        - /url: /console/language
+        - img [ref=e88]
+        - generic [ref=e92]: Language
+    - generic [ref=e94]:
+      - generic [ref=e95]: S
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: Alex Sterling
+        - paragraph [ref=e98]: ID:123456
+      - button "User menu" [ref=e99] [cursor=pointer]:
+        - img [ref=e101]
+  - main [ref=e105]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Management Console
+        - heading "Account Settings" [level=1] [ref=e110]
+      - tablist [ref=e115]:
+        - tab "Summary" [selected] [ref=e117]
+        - tab "Operation Log" [ref=e118]
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - generic [ref=e122]:
+            - generic [ref=e123]: Active Status
+            - generic [ref=e124]:
+              - heading "Identity Verified" [level=2] [ref=e125]
+              - paragraph [ref=e126]: Your account was verified on October 12, 2023. Next review scheduled for 2025.
+            - paragraph [ref=e127]:
+              - generic [ref=e128]: User Account：
+              - strong [ref=e129]: 30 12345678
+            - generic "Profile security 20 percent" [ref=e130]:
+              - progressbar [ref=e131]
+              - generic [ref=e135]: "Profile Security: 20%"
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - heading "Basic Information" [level=2] [ref=e139]
+              - paragraph [ref=e140]: Manage your personal details and localization settings.
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e143]:
+                  - generic [ref=e144]: Full Name
+                  - textbox "Full Name" [ref=e148]: Alex Sterling
+                - generic [ref=e149]:
+                  - generic [ref=e150]: Language
+                  - generic [ref=e153] [cursor=pointer]:
+                    - generic:
+                      - combobox "Language" [ref=e155]
+                      - generic [ref=e156]: English (United States)
+                    - img [ref=e159]
+              - generic [ref=e161]:
+                - generic [ref=e162]:
+                  - generic [ref=e163]: Company
+                  - textbox "Company" [ref=e167]: Origins Cloud Systems
+                - generic [ref=e168]:
+                  - generic [ref=e169]: Country/Region
+                  - textbox "Country/Region" [ref=e173]: Germany
+              - generic [ref=e174]:
+                - generic [ref=e175]: Office Address
+                - textbox "Office Address" [ref=e178]: Technology Park East, Building 4, Berlin, 10115
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - img [ref=e182]
+                - generic [ref=e185]:
+                  - heading "Email Notifications" [level=3] [ref=e186]
+                  - paragraph [ref=e187]: Receive weekly performance summaries and alerts.
+              - generic [ref=e188]:
+                - switch "Email notifications enabled" [checked]
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - heading "Account Credentials" [level=2] [ref=e194]
+            - paragraph [ref=e195]: Security settings and primary contact identifiers.
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - generic [ref=e199]: Phone Number
+                - generic [ref=e201]:
+                  - generic [ref=e202]: "+49"
+                  - textbox "Phone Number" [ref=e204]: 30 12345678
+              - generic [ref=e205]:
+                - generic [ref=e206]: Primary Email
+                - textbox "Primary Email" [ref=e210]: alex.sterling@origins-cloud.tech
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: Account Password
+                - generic [ref=e216]:
+                  - textbox "Account Password" [ref=e217]: "*********"
+                  - img [ref=e220] [cursor=pointer]
+              - button "Change Password" [ref=e223] [cursor=pointer]:
+                - generic [ref=e224]: Change Password
+      - generic [ref=e225]:
+        - button "Discard Changes" [ref=e226] [cursor=pointer]:
+          - generic [ref=e227]: Discard Changes
+        - button "Save Account Profile" [ref=e228] [cursor=pointer]:
+          - generic [ref=e229]: Save Account Profile

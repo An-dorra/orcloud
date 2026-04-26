@@ -1,0 +1,84 @@
+[     731ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/orders" @ http://localhost:5174/@vite/client:509
+[     733ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/products" @ http://localhost:5174/@vite/client:509
+[     733ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/finance" @ http://localhost:5174/@vite/client:509
+[     733ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/security" @ http://localhost:5174/@vite/client:509
+[     734ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/resources" @ http://localhost:5174/@vite/client:509
+[     734ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/tickets" @ http://localhost:5174/@vite/client:509
+[     734ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/sub-accounts" @ http://localhost:5174/@vite/client:509
+[     734ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/cart" @ http://localhost:5174/@vite/client:509
+[     734ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/language" @ http://localhost:5174/@vite/client:509
+[  548580ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/orders" @ http://localhost:5174/@vite/client:509
+[  548580ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/products" @ http://localhost:5174/@vite/client:509
+[  548581ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/finance" @ http://localhost:5174/@vite/client:509
+[  548581ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/security" @ http://localhost:5174/@vite/client:509
+[  548582ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/resources" @ http://localhost:5174/@vite/client:509
+[  548582ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/tickets" @ http://localhost:5174/@vite/client:509
+[  548582ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/sub-accounts" @ http://localhost:5174/@vite/client:509
+[  548582ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/cart" @ http://localhost:5174/@vite/client:509
+[  548582ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/language" @ http://localhost:5174/@vite/client:509
+[  548588ms] [WARNING] [Vue warn]: Invalid prop: type check failed for prop "teleported". Expected Boolean, got String with value "false". 
+  at <ElSelect modelValue="English (United States)" onUpdate:modelValue=fn teleported="false" > 
+  at <ElFormItem label="Language" > 
+  at <ElForm class="account-form" model= {fullName: Alex Sterling, language: English (United States), company: Origins Cloud Systems, country: Germany, officeAddress: Technology Park East, Building 4, Berlin, 10115} label-position="top" > 
+  at <ElCard class="account-panel basic-panel" shadow="never" > 
+  at <ConsoleLayout> 
+  at <ConsoleAccountInformationView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< null > key=0 > 
+  at <RouterView> 
+  at <App> @ http://localhost:5174/@vite/client:509
+[  548592ms] [WARNING] Invalid prop: type check failed for prop "teleported". Expected Boolean, got String with value "false". null at <ElTooltip>
+at <ElSelect>
+at <ElFormItem>
+at <ElForm>
+at <ElCard>
+at <ConsoleLayout>
+at <ConsoleAccountInformationView>
+at <RouterView>
+at <App> [Object, Object, Object, Object, Object, Object, Object, Object, Object] @ http://localhost:5174/@vite/client:509
+[  548608ms] [WARNING] Invalid prop: type check failed for prop "teleported". Expected Boolean, got String with value "false". null at <ElTooltipContent>
+at <ElPopper>
+at <ElTooltip>
+at <ElSelect>
+at <ElFormItem>
+at <ElForm>
+at <ElCard>
+at <ConsoleLayout>
+at <ConsoleAccountInformationView>
+at <RouterView>
+at <App> [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ http://localhost:5174/@vite/client:509
+[  548639ms] [WARNING] Invalid prop: type check failed for prop "teleported". Expected Boolean, got String with value "false". Proxy(Object) at <ElSelect>
+at <ElFormItem>
+at <ElForm>
+at <ElCard>
+at <ConsoleLayout>
+at <ConsoleAccountInformationView>
+at <RouterView>
+at <App> [Object, Object, Object, Object, Object, Object, Object, Object] @ http://localhost:5174/@vite/client:509
+[  548674ms] [WARNING] Invalid prop: type check failed for prop "teleported". Expected Boolean, got String with value "false". Proxy(Object) at <ElTooltip>
+at <ElSelect>
+at <ElFormItem>
+at <ElForm>
+at <ElCard>
+at <ConsoleLayout>
+at <ConsoleAccountInformationView>
+at <RouterView>
+at <App> [Object, Object, Object, Object, Object, Object, Object, Object, Object] @ http://localhost:5174/@vite/client:509
+[  548711ms] [WARNING] Invalid prop: type check failed for prop "teleported". Expected Boolean, got String with value "false". Proxy(Object) at <ElTooltipContent>
+at <ElPopper>
+at <ElTooltip>
+at <ElSelect>
+at <ElFormItem>
+at <ElForm>
+at <ElCard>
+at <ConsoleLayout>
+at <ConsoleAccountInformationView>
+at <RouterView>
+at <App> [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ http://localhost:5174/@vite/client:509
+[  562553ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/orders" @ http://localhost:5174/@vite/client:509
+[  562554ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/products" @ http://localhost:5174/@vite/client:509
+[  562554ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/finance" @ http://localhost:5174/@vite/client:509
+[  562554ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/security" @ http://localhost:5174/@vite/client:509
+[  562555ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/resources" @ http://localhost:5174/@vite/client:509
+[  562555ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/tickets" @ http://localhost:5174/@vite/client:509
+[  562555ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/sub-accounts" @ http://localhost:5174/@vite/client:509
+[  562555ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/cart" @ http://localhost:5174/@vite/client:509
+[  562555ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/language" @ http://localhost:5174/@vite/client:509

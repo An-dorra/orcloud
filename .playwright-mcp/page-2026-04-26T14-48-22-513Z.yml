@@ -1,0 +1,132 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - link "Origins Cloud" [ref=e6] [cursor=pointer]:
+      - /url: /console
+      - img "Origins Cloud" [ref=e7]
+    - navigation [ref=e8]:
+      - link "Order Products" [ref=e9] [cursor=pointer]:
+        - /url: /console/orders
+        - img [ref=e10]
+        - generic [ref=e13]: Order Products
+      - link "My Products" [ref=e14] [cursor=pointer]:
+        - /url: /console/products
+        - img [ref=e15]
+        - generic [ref=e25]: My Products
+      - link "Account Information" [ref=e26] [cursor=pointer]:
+        - /url: /console/account
+        - img [ref=e27]
+        - generic [ref=e39]: Account Information
+      - link "Financial Information" [ref=e40] [cursor=pointer]:
+        - /url: /console/finance
+        - img [ref=e41]
+        - generic [ref=e45]: Financial Information
+      - link "Security Center" [ref=e46] [cursor=pointer]:
+        - /url: /console/security
+        - img [ref=e47]
+        - generic [ref=e50]: Security Center
+      - link "Resource Center" [ref=e51] [cursor=pointer]:
+        - /url: /console/resources
+        - img [ref=e52]
+        - generic [ref=e62]: Resource Center
+      - link "Ticket Center" [ref=e63] [cursor=pointer]:
+        - /url: /console/tickets
+        - img [ref=e64]
+        - generic [ref=e66]: Ticket Center
+      - link "Sub-account Management" [ref=e67] [cursor=pointer]:
+        - /url: /console/sub-accounts
+        - img [ref=e68]
+        - generic [ref=e79]: Sub-account Management
+    - navigation [ref=e80]:
+      - link "Shopping Cart" [ref=e81] [cursor=pointer]:
+        - /url: /console/cart
+        - img [ref=e82]
+        - generic [ref=e86]: Shopping Cart
+      - link "Language" [ref=e87] [cursor=pointer]:
+        - /url: /console/language
+        - img [ref=e88]
+        - generic [ref=e92]: Language
+    - generic [ref=e94]:
+      - generic [ref=e95]: S
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: Alex Sterling
+        - paragraph [ref=e98]: ID:123456
+      - button "User menu" [ref=e99] [cursor=pointer]:
+        - img [ref=e101]
+  - main [ref=e105]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Management Console
+        - heading "Security" [level=1] [ref=e110]
+      - tablist [ref=e115]:
+        - tab "API" [selected] [ref=e117]
+        - tab "SSH Key" [ref=e118]
+        - tab "API Logs" [ref=e119] [cursor=pointer]
+        - tab "Security Group" [ref=e120]
+      - generic [ref=e122]:
+        - button "Create API" [ref=e124] [cursor=pointer]:
+          - generic [ref=e125]:
+            - img [ref=e126]
+            - text: Create API
+        - generic [ref=e129]:
+          - table [ref=e131]:
+            - rowgroup [ref=e139]:
+              - row "ID Name Creation Time IP Whitelist Allowed IP Access Operation" [ref=e140]:
+                - columnheader "ID" [ref=e141]:
+                  - generic [ref=e142]: ID
+                - columnheader "Name" [ref=e143]:
+                  - generic [ref=e144]: Name
+                - columnheader "Creation Time" [ref=e145]:
+                  - generic [ref=e146]: Creation Time
+                - columnheader "IP Whitelist" [ref=e147]:
+                  - generic [ref=e148]: IP Whitelist
+                - columnheader "Allowed IP Access" [ref=e149]:
+                  - generic [ref=e150]: Allowed IP Access
+                - columnheader "Operation" [ref=e151]:
+                  - generic [ref=e152]: Operation
+          - table [ref=e157]:
+            - rowgroup [ref=e165]:
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292 172.70.208.80:13292 delete" [ref=e166]:
+                - cell "406" [ref=e167]:
+                  - generic [ref=e168]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e169]:
+                  - generic [ref=e170]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e171]:
+                  - generic [ref=e172]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e173]:
+                  - generic [ref=e174]: 172.70.208.80:13292
+                - cell "172.70.208.80:13292" [ref=e175]:
+                  - generic [ref=e176]: 172.70.208.80:13292
+                - cell "delete" [ref=e177]:
+                  - button "delete" [ref=e179] [cursor=pointer]:
+                    - generic [ref=e180]: delete
+              - row "406 User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful 2026-04-13 19:11 172.70.208.80:13292 172.70.208.80:13292 delete" [ref=e181]:
+                - cell "406" [ref=e182]:
+                  - generic [ref=e183]: "406"
+                - cell "User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful" [ref=e184]:
+                  - generic [ref=e185]: User 123456 has agreed to the 'Service Agreement' and 'Privacy Policy, account registration successful
+                - cell "2026-04-13 19:11" [ref=e186]:
+                  - generic [ref=e187]: 2026-04-13 19:11
+                - cell "172.70.208.80:13292" [ref=e188]:
+                  - generic [ref=e189]: 172.70.208.80:13292
+                - cell "172.70.208.80:13292" [ref=e190]:
+                  - generic [ref=e191]: 172.70.208.80:13292
+                - cell "delete" [ref=e192]:
+                  - button "delete" [ref=e194] [cursor=pointer]:
+                    - generic [ref=e195]: delete
+        - generic [ref=e197]:
+          - button "Go to previous page" [disabled] [ref=e198]:
+            - generic:
+              - img
+          - list [ref=e199]:
+            - listitem "page 1" [ref=e200]: "1"
+            - listitem "page 2" [ref=e201] [cursor=pointer]: "2"
+            - listitem "page 3" [ref=e202] [cursor=pointer]: "3"
+            - listitem "page 4" [ref=e203] [cursor=pointer]: "4"
+            - listitem "page 5" [ref=e204] [cursor=pointer]: "5"
+            - listitem "page 6" [ref=e205] [cursor=pointer]: "6"
+            - listitem "Next 5 pages" [ref=e206] [cursor=pointer]:
+              - img
+            - listitem "page 50" [ref=e207] [cursor=pointer]: "50"
+          - button "Go to next page" [ref=e208] [cursor=pointer]:
+            - generic:
+              - img

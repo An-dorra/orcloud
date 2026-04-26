@@ -40,16 +40,13 @@
 
       <img
         v-if="card.iconSrc"
-        class="absolute"
-        :class="
-          card.title === '1-Day ICP'
-            ? 'left-[326px] top-[148px] h-[39px] w-[49.4px]'
-            : card.title === '24/7/365'
-              ? 'left-[326px] top-[148px] h-[50px] w-[49.825px]'
-              : card.title === 'No ICP Needed'
-                ? 'left-[326px] top-[148px] h-[50px] w-[50px]'
-                : 'left-[331px] top-[148px] h-[50px] w-[39.6px]'
-        "
+        class="absolute right-[32px] bottom-[24px]"
+        :class="[
+          card.title === '1-Day ICP' ? 'h-[39px] w-[49.4px]' :
+          card.title === '24/7/365' ? 'h-[50px] w-[49.825px]' :
+          card.title === 'No ICP Needed' ? 'h-[50px] w-[50px]' :
+          'h-[50px] w-[39.6px]'
+        ]"
         :src="card.iconSrc"
         alt=""
         aria-hidden="true"
@@ -57,7 +54,7 @@
 
       <img
         v-if="card.accentIconSrc"
-        class="absolute left-[740px] top-[135px] h-[60px] w-[60px]"
+        class="absolute right-[32px] bottom-[24px] h-[60px] w-[60px]"
         :src="card.accentIconSrc"
         alt=""
         aria-hidden="true"

@@ -50,7 +50,7 @@
         <img class="block h-5 w-5" :src="iconApps" alt="" aria-hidden="true" />
       </button>
       <img class="site-header__divider block h-[15px] w-px" :src="iconVerticalDivider" alt="" aria-hidden="true" />
-      <RouterLink class="site-header__plain-link inline-flex items-center gap-1 whitespace-nowrap text-[16px] leading-6 font-[300] text-[#1d2129] no-underline" to="/">
+      <RouterLink class="site-header__plain-link inline-flex items-center gap-1 whitespace-nowrap text-[16px] leading-6 font-[300] text-[#1d2129] no-underline" to="/console">
         Console
       </RouterLink>
       <RouterLink class="site-header__plain-link inline-flex items-center gap-1 whitespace-nowrap text-[16px] leading-6 font-[300] text-[#1d2129] no-underline" to="/">

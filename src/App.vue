@@ -1,14 +1,20 @@
 <template>
   <div class="app-shell min-h-screen bg-white">
-    <SiteHeader />
-    <DesignScaler>
-      <div class="min-h-screen w-[1920px] bg-white">
-        <main class="pt-20">
-          <RouterView />
-        </main>
-        <SiteFooter />
-      </div>
-    </DesignScaler>
+    <RouterView v-slot="{ Component, route }">
+      <component v-if="route.meta.layout === 'console'" :is="Component" />
+
+      <template v-else>
+        <SiteHeader />
+        <DesignScaler>
+          <div class="min-h-screen w-[1920px] bg-white">
+            <main class="pt-20">
+              <component :is="Component" />
+            </main>
+            <SiteFooter />
+          </div>
+        </DesignScaler>
+      </template>
+    </RouterView>
   </div>
 </template>
 

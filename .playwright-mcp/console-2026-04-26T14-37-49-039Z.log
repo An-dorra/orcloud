@@ -1,0 +1,17 @@
+[     192ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/orders" @ http://localhost:5174/@vite/client:509
+[     193ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/products" @ http://localhost:5174/@vite/client:509
+[     193ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/finance" @ http://localhost:5174/@vite/client:509
+[     193ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/security" @ http://localhost:5174/@vite/client:509
+[     193ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/resources" @ http://localhost:5174/@vite/client:509
+[     194ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/tickets" @ http://localhost:5174/@vite/client:509
+[     194ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/sub-accounts" @ http://localhost:5174/@vite/client:509
+[     195ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/cart" @ http://localhost:5174/@vite/client:509
+[     195ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/language" @ http://localhost:5174/@vite/client:509
+[  541039ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/orders" @ http://localhost:5174/@vite/client:509
+[  541040ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/products" @ http://localhost:5174/@vite/client:509
+[  541042ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/finance" @ http://localhost:5174/@vite/client:509
+[  541042ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/resources" @ http://localhost:5174/@vite/client:509
+[  541042ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/tickets" @ http://localhost:5174/@vite/client:509
+[  541042ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/sub-accounts" @ http://localhost:5174/@vite/client:509
+[  541043ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/cart" @ http://localhost:5174/@vite/client:509
+[  541043ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/language" @ http://localhost:5174/@vite/client:509

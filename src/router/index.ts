@@ -2,13 +2,18 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import AboutView from '@/views/AboutView.vue'
+import ConsoleAccountInformationView from '@/views/console/ConsoleAccountInformationView.vue'
+import ConsoleDashboardView from '@/views/console/ConsoleDashboardView.vue'
+import ConsoleSecurityCenterView from '@/views/console/ConsoleSecurityCenterView.vue'
 import DataCenterView from '@/views/DataCenterView.vue'
 import DomainRegistrationView from '@/views/DomainRegistrationView.vue'
 import HomeView from '@/views/HomeView.vue'
 import ProductCenterView from '@/views/ProductCenterView.vue'
 import ServiceGuaranteeView from '@/views/ServiceGuaranteeView.vue'
+import SolutionPageView from '@/views/solutions/SolutionPageView.vue'
 import TrustCenterView from '@/views/TrustCenterView.vue'
 import VipMemberServiceView from '@/views/VipMemberServiceView.vue'
+import OfficialAnnouncementsView from '@/views/OfficialAnnouncementsView.vue'
 
 // Exporting routes separately makes the route contract easy to test.
 export const routes: RouteRecordRaw[] = [
@@ -51,6 +56,40 @@ export const routes: RouteRecordRaw[] = [
     path: '/about',
     name: 'about',
     component: AboutView,
+  },
+  {
+    path: '/official-announcements',
+    name: 'official-announcements',
+    component: OfficialAnnouncementsView,
+  },
+  {
+    path: '/console',
+    name: 'console-dashboard',
+    component: ConsoleDashboardView,
+    meta: {
+      layout: 'console',
+    },
+  },
+  {
+    path: '/console/account',
+    name: 'console-account-information',
+    component: ConsoleAccountInformationView,
+    meta: {
+      layout: 'console',
+    },
+  },
+  {
+    path: '/console/security',
+    name: 'console-security-center',
+    component: ConsoleSecurityCenterView,
+    meta: {
+      layout: 'console',
+    },
+  },
+  {
+    path: '/solutions/:slug',
+    name: 'solution-page',
+    component: SolutionPageView,
   },
 ]
 

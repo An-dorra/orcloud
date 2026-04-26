@@ -1,9 +1,8 @@
 <template>
-  <div ref="pageRef" class="vip-member-service-page w-[1920px] bg-white text-[#1d2129]">
+  <div class="vip-member-service-page w-[1920px] bg-white text-[#1d2129]">
     <FullBleedSection
       class="overflow-hidden bg-[linear-gradient(180deg,rgba(160,198,255,0.2)_0%,rgba(160,198,255,0)_95.918%)] bg-no-repeat [background-position:center_top] [background-size:1920px_686px] min-[1921px]:[background-size:var(--viewport-width,100vw)_auto]"
       content-class="relative h-[686px] overflow-hidden"
-      :style="{ backgroundImage: `url(${heroBackground})` }"
     >
       <div class="pointer-events-none absolute top-[43px] right-1 h-[409px] w-[795px] rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(93,157,255,0.18)_0%,rgba(93,157,255,0.09)_38%,rgba(93,157,255,0)_72%)] blur-[12px]" />
 
@@ -17,7 +16,7 @@
       </div>
     </FullBleedSection>
 
-    <section class="h-[939px] bg-white px-[120px] pt-[150px]">
+    <section class="h-[939px] bg-[#f7f9fc] px-[120px] pt-[150px]">
       <InfrastructureSectionHeading
         title="7x24x365 Technical Support"
         subtitle="Our professional after-sales engineering team is stationed around the clock to ensure your infrastructure never sleeps."
@@ -52,8 +51,8 @@
               :highlighted="Boolean(step.highlighted)"
               width="355px"
               height="242px"
-              title-class="mt-0 text-[18px] leading-6"
-              description-class="mt-0 text-[14px] leading-[normal]"
+              title-class="mt-6 text-[18px] leading-6"
+              description-class="mt-3 text-[14px] leading-[normal]"
             />
           </div>
         </div>
@@ -87,7 +86,7 @@
       </div>
     </FullBleedSection>
 
-    <section class="relative h-[695px] bg-white px-[120px] pt-[151px]">
+    <section class="relative h-[695px] bg-[#f7f9fc] px-[120px] pt-[151px]">
       <div class="flex items-start justify-between">
         <div class="w-[949.93px]">
           <div class="reveal-on-scroll">
@@ -148,24 +147,24 @@
               :highlighted="Boolean(step.highlighted)"
               width="388px"
               height="242px"
-              title-class="mt-0 text-[24px] leading-[29px]"
+              title-class="mt-6 text-[24px] leading-[29px]"
             />
           </div>
         </div>
 
           <img
-            class="pointer-events-none absolute top-[91px] left-[358px] h-[60px] w-[60px]"
+            class="pointer-events-none absolute top-[91px] left-[366px] h-[60px] w-[60px]"
             :src="vipMemberServiceAssets.icpProcessStepConnector"
             alt=""
             aria-hidden="true"
           />
           <img
-            class="pointer-events-none absolute top-[349px] left-[374px] h-[60px] w-[60px] -scale-y-100 rotate-180"
+            class="pointer-events-none absolute top-[349px] left-[366px] h-[60px] w-[60px] rotate-180"
             :src="vipMemberServiceAssets.icpProcessStepConnector"
             alt=""
             aria-hidden="true"
           />
-          <img class="pointer-events-none absolute top-[212px] left-[568px] h-[60px] w-[60px] rotate-90" :src="vipMemberServiceAssets.icpProcessStepConnector" alt="" aria-hidden="true" />
+          <img class="pointer-events-none absolute top-[220px] left-[568px] h-[60px] w-[60px] rotate-90" :src="vipMemberServiceAssets.icpProcessStepConnector" alt="" aria-hidden="true" />
         </div>
 
         <div class="w-[790px] pt-[1px]">
@@ -186,7 +185,7 @@
       </div>
     </section>
 
-    <section class="h-[887px] bg-white px-[120px] pt-[150px]">
+    <section class="h-[887px] bg-[#f7f9fc] px-[120px] pt-[150px]">
       <div class="flex justify-center">
         <h2 class="reveal-on-scroll m-0 text-center text-[56px] leading-[68px] font-semibold tracking-[-0.02em] text-[#1a1c1c]">
           Membership at a Glance
@@ -210,12 +209,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-import heroBackground from '@/assets/infrastructure/hero/infrastructure-hero-background.jpg'
 import FullBleedSection from '@/components/layout/FullBleedSection.vue'
 import OrclawCtaSection from '@/components/sections/OrclawCtaSection.vue'
-import { useScrollReveal } from '@/composables/useScrollReveal'
 import {
   vipFaqItems,
   vipGuaranteeCards,
@@ -227,14 +222,18 @@ import {
   vipRefundProcessSteps,
   vipServiceStageCards,
 } from '@/data/vipMemberService'
-import '@/styles/page-reveal.css'
 import InfrastructureSectionHeading from '@/views/infrastructure/components/InfrastructureSectionHeading.vue'
 import VipOverviewCard from '@/views/vip-member-service/components/VipOverviewCard.vue'
 import VipProcessStepCard from '@/views/vip-member-service/components/VipProcessStepCard.vue'
 import VipScenarioCard from '@/views/vip-member-service/components/VipScenarioCard.vue'
 import VipServiceStageCard from '@/views/vip-member-service/components/VipServiceStageCard.vue'
-
-const pageRef = ref<HTMLElement | null>(null)
-
-useScrollReveal(pageRef)
 </script>
+
+<style scoped>
+:deep(.reveal-on-scroll),
+:deep(.reveal-media) {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+</style>

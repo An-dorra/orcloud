@@ -1,0 +1,8 @@
+[     147ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/orders" @ http://localhost:5174/@vite/client:509
+[     148ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/products" @ http://localhost:5174/@vite/client:509
+[     148ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/finance" @ http://localhost:5174/@vite/client:509
+[     148ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/resources" @ http://localhost:5174/@vite/client:509
+[     149ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/tickets" @ http://localhost:5174/@vite/client:509
+[     149ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/sub-accounts" @ http://localhost:5174/@vite/client:509
+[     149ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/cart" @ http://localhost:5174/@vite/client:509
+[     149ms] [WARNING] [Vue Router warn]: No match found for location with path "/console/language" @ http://localhost:5174/@vite/client:509

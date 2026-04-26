@@ -23,4 +23,12 @@ describe('VipMemberServiceView', () => {
     expect(wrapper.findComponent(OrclawCtaSection).exists()).toBe(true)
     expect(wrapper.find('img[src*="vip-member-service"]').exists()).toBe(true)
   })
+
+  it('matches the figma refund flow order', () => {
+    const wrapper = mount(VipMemberServiceView)
+
+    const processTitles = wrapper.findAll('.vip-process-step-card h3').map((node) => node.text())
+
+    expect(processTitles.slice(-4)).toEqual(['INITIATE', 'VERIFY', 'REFUNDED', 'APPROVE'])
+  })
 })

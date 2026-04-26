@@ -1,0 +1,122 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - link "Origins Cloud" [ref=e6] [cursor=pointer]:
+      - /url: /console
+      - img "Origins Cloud" [ref=e7]
+    - navigation [ref=e8]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /console/orders
+        - img [ref=e10]
+      - link [ref=e13] [cursor=pointer]:
+        - /url: /console/products
+        - img [ref=e14]
+      - link [ref=e24] [cursor=pointer]:
+        - /url: /console/account
+        - img [ref=e25]
+      - link [ref=e37] [cursor=pointer]:
+        - /url: /console/finance
+        - img [ref=e38]
+      - link [ref=e42] [cursor=pointer]:
+        - /url: /console/security
+        - img [ref=e43]
+      - link [ref=e46] [cursor=pointer]:
+        - /url: /console/resources
+        - img [ref=e47]
+      - link [ref=e57] [cursor=pointer]:
+        - /url: /console/tickets
+        - img [ref=e58]
+      - link [ref=e60] [cursor=pointer]:
+        - /url: /console/sub-accounts
+        - img [ref=e61]
+    - navigation [ref=e72]:
+      - link [ref=e73] [cursor=pointer]:
+        - /url: /console/cart
+        - img [ref=e74]
+      - link [ref=e78] [cursor=pointer]:
+        - /url: /console/language
+        - img [ref=e79]
+    - generic [ref=e83]:
+      - generic:
+        - generic: S
+  - main [ref=e84]:
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - paragraph [ref=e88]: Management Console
+        - heading "Account Settings" [level=1] [ref=e89]
+      - tablist [ref=e94]:
+        - tab "Summary" [selected] [ref=e96]
+        - tab "Summary" [ref=e97]
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: Active Status
+            - generic [ref=e103]:
+              - heading "Identity Verified" [level=2] [ref=e104]
+              - paragraph [ref=e105]: Your account was verified on October 12, 2023. Next review scheduled for 2025.
+            - paragraph [ref=e106]:
+              - generic [ref=e107]: User Account：
+              - strong [ref=e108]: 30 12345678
+            - generic "Profile security 20 percent" [ref=e109]:
+              - progressbar [ref=e110]
+              - generic [ref=e114]: "Profile Security: 20%"
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - heading "Basic Information" [level=2] [ref=e118]
+              - paragraph [ref=e119]: Manage your personal details and localization settings.
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - generic [ref=e123]: Full Name
+                  - textbox "Full Name" [ref=e127]: Alex Sterling
+                - generic [ref=e128]:
+                  - generic [ref=e129]: Language
+                  - generic [ref=e132] [cursor=pointer]:
+                    - generic:
+                      - combobox "Language" [ref=e134]
+                      - generic [ref=e135]: English (United States)
+                    - img [ref=e138]
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - generic [ref=e142]: Company
+                  - textbox "Company" [ref=e146]: Origins Cloud Systems
+                - generic [ref=e147]:
+                  - generic [ref=e148]: Country/Region
+                  - textbox "Country/Region" [ref=e152]: Germany
+              - generic [ref=e153]:
+                - generic [ref=e154]: Office Address
+                - textbox "Office Address" [ref=e157]: Technology Park East, Building 4, Berlin, 10115
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - img [ref=e161]
+                - generic [ref=e164]:
+                  - heading "Email Notifications" [level=3] [ref=e165]
+                  - paragraph [ref=e166]: Receive weekly performance summaries and alerts.
+              - generic [ref=e167]:
+                - switch "Email notifications enabled" [checked]
+        - generic [ref=e171]:
+          - generic [ref=e172]:
+            - heading "Account Credentials" [level=2] [ref=e173]
+            - paragraph [ref=e174]: Security settings and primary contact identifiers.
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]:
+                - generic [ref=e178]: Phone Number
+                - generic [ref=e180]:
+                  - generic [ref=e181]: "+49"
+                  - textbox "Phone Number" [ref=e183]: 30 12345678
+              - generic [ref=e184]:
+                - generic [ref=e185]: Primary Email
+                - textbox "Primary Email" [ref=e189]: alex.sterling@origins-cloud.tech
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - generic [ref=e192]: Account Password
+                - generic [ref=e195]:
+                  - textbox "Account Password" [ref=e196]: "*********"
+                  - img [ref=e199]
+              - button "Change Password" [ref=e204] [cursor=pointer]:
+                - generic [ref=e205]: Change Password
+      - generic [ref=e206]:
+        - button "Discard Changes" [ref=e207] [cursor=pointer]:
+          - generic [ref=e208]: Discard Changes
+        - button "Save Account Profile" [ref=e209] [cursor=pointer]:
+          - generic [ref=e210]: Save Account Profile

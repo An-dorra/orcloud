@@ -8,7 +8,7 @@
     >
       {{ card.title }}
     </h3>
-    <p class="mt-0 mb-0 min-h-[72px] text-[18px] leading-6 font-normal text-[#3f4751]">
+    <p class="mt-4 mb-0 min-h-[72px] text-[18px] leading-6 font-normal text-[#3f4751]">
       {{ card.description }}
     </p>
     <span class="mt-6 block h-px w-[420px] bg-[#ebedf1]" aria-hidden="true" />

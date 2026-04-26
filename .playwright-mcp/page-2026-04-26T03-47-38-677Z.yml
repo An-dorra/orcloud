@@ -1,0 +1,336 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Origins Cloud home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Origins Cloud" [ref=e7]
+      - navigation "Primary navigation" [ref=e8]:
+        - link "Product Center" [ref=e10] [cursor=pointer]:
+          - /url: /product-center
+          - text: Product Center
+          - img [ref=e12]
+        - link "Service Guarantee" [ref=e15] [cursor=pointer]:
+          - /url: /service-guarantee
+          - text: Service Guarantee
+          - img [ref=e17]
+        - link "Solutions" [ref=e20] [cursor=pointer]:
+          - /url: /
+          - text: Solutions
+          - img [ref=e22]
+        - link "Ecological Cooperation" [ref=e25] [cursor=pointer]:
+          - /url: /
+          - text: Ecological Cooperation
+          - img [ref=e27]
+        - link "About Us" [ref=e30] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+          - img [ref=e32]
+      - generic "Account links" [ref=e34]:
+        - button "Language" [ref=e35]:
+          - img [ref=e36]
+        - button "App menu" [ref=e37]:
+          - img [ref=e38]
+        - img [ref=e39]
+        - link "Console" [ref=e40] [cursor=pointer]:
+          - /url: /
+        - link "Login" [ref=e41] [cursor=pointer]:
+          - /url: /
+        - link "Register" [ref=e42] [cursor=pointer]:
+          - /url: /
+      - generic:
+        - generic:
+          - generic:
+            - link "Cloud Servers":
+              - /url: /product-center
+            - link "Domain Registration":
+              - /url: /domain-registration
+      - generic:
+        - generic:
+          - generic:
+            - button "Service Guarantee":
+              - generic: Service Guarantee
+            - button "Official Announcement":
+              - generic: Official Announcement
+          - generic:
+            - generic:
+              - link "Service Guarantee":
+                - /url: /service-guarantee
+              - link "Trust Center":
+                - /url: /trust-center
+              - link "Data Center":
+                - /url: /data-center
+              - link "VIP Member Service":
+                - /url: /vip-member-service
+      - generic:
+        - generic:
+          - generic:
+            - button "General Solution":
+              - generic: General Solution
+            - button "Industry Solutions":
+              - generic: Industry Solutions
+          - generic:
+            - generic:
+              - link "Cloud Server Deployment":
+                - /url: /
+              - link "Highly Available Architecture":
+                - /url: /
+              - link "Data Backup and Recovery":
+                - /url: /
+              - link "Safety Protection":
+                - /url: /
+              - link "Flexible Expansion":
+                - /url: /
+              - link "Automated Deployment":
+                - /url: /
+  - generic [ref=e44]:
+    - main [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e49]:
+          - heading "VIP Membership Services" [level=1] [ref=e50]
+          - paragraph [ref=e51]: Elevate your cloud operations with Origins Cloud's bespoke VIP support ecosystem. Experience elite efficiency, proactive infrastructure health monitoring, and a dedicated team committed to your long-term success.
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - heading "7x24x365 Technical Support" [level=2] [ref=e54]
+            - paragraph [ref=e55]: Our professional after-sales engineering team is stationed around the clock to ensure your infrastructure never sleeps.
+          - generic [ref=e56]:
+            - article [ref=e58] [cursor=pointer]:
+              - img [ref=e59]
+              - heading "Pre-Sales Phase" [level=3] [ref=e60]
+              - paragraph [ref=e61]: Personalized architecture consulting and professional training sessions to align your cloud strategy with business goals.
+              - generic [ref=e63]:
+                - generic [ref=e66]: Strategy Workshops
+                - generic [ref=e69]: Systems Audit
+            - article [ref=e71] [cursor=pointer]:
+              - img [ref=e72]
+              - heading "In-Sales Phase" [level=3] [ref=e73]
+              - paragraph [ref=e74]: Seamless deployment monitoring,order verification, and instant confirmation for rapid resource provisioning.
+              - generic [ref=e76]:
+                - generic [ref=e79]: Rapid Onboarding
+                - generic [ref=e82]: Priority Deployment
+            - article [ref=e84] [cursor=pointer]:
+              - img [ref=e85]
+              - heading "After-Sales Phase" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Ongoing maintenance, security updates, and performance tuning to ensure long-term stability and ROI.
+              - generic [ref=e89]:
+                - generic [ref=e92]: 24/7 Monitoring
+                - generic [ref=e95]: Quarterly Reviews
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - article [ref=e101] [cursor=pointer]:
+              - generic [ref=e102]:
+                - generic [ref=e104]: "1"
+                - heading "System Entry" [level=3] [ref=e105]
+                - paragraph [ref=e106]: Data input and initial documentation
+            - article [ref=e108] [cursor=pointer]:
+              - generic [ref=e109]:
+                - generic [ref=e111]: "2"
+                - heading "Review" [level=3] [ref=e112]
+                - paragraph [ref=e113]: Expert validation of filing materials
+            - article [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]:
+                - generic [ref=e118]: "3"
+                - heading "Approval" [level=3] [ref=e119]
+                - paragraph [ref=e120]: Provincial communication authority
+            - article [ref=e122] [cursor=pointer]:
+              - generic [ref=e123]:
+                - generic [ref=e125]: "4"
+                - heading "Completed" [level=3] [ref=e126]
+                - paragraph [ref=e127]: Launch-ready infrastructure
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - heading "Free ICP Filing" [level=2] [ref=e130]
+              - paragraph [ref=e131]: Zero Cost • Fast Processing • Professional Agency
+            - heading "Frequently Asked Questions" [level=3] [ref=e133]
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - generic [ref=e136]: Processing Time?
+                - img [ref=e138]
+              - generic [ref=e139]:
+                - generic [ref=e140]: Site Shutdown Required?
+                - img [ref=e142]
+              - generic [ref=e143]:
+                - generic [ref=e144]: Photo Requirements?
+                - img [ref=e146]
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "100x Failure Compensation Guarantee" [level=2] [ref=e151]:
+                - text: 100x Failure
+                - text: Compensation Guarantee
+              - paragraph [ref=e152]: We stand behind our infrastructure. If we fail to meet our SLA, we don't just refund; we compensate at 100 times the downtime impact.
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e155]: 99.999%
+                - generic [ref=e156]: DATA RELIABILITY
+              - generic [ref=e157]:
+                - generic [ref=e158]: 99.95%
+                - generic [ref=e159]: NETWORK AVAILABILITY
+          - generic [ref=e160]:
+            - heading "Compensation Scope" [level=3] [ref=e162]
+            - generic [ref=e163]:
+              - article [ref=e165] [cursor=pointer]:
+                - img [ref=e166]
+                - generic [ref=e167]:
+                  - img [ref=e168]
+                  - generic [ref=e169]:
+                    - heading "Eligible Scenarios" [level=3] [ref=e170]
+                    - paragraph [ref=e171]: Hardware failure, backbone network congestion, platform-side software bugs.
+              - article [ref=e173] [cursor=pointer]:
+                - img [ref=e174]
+                - generic [ref=e175]:
+                  - img [ref=e176]
+                  - generic [ref=e177]:
+                    - heading "Excluded Scenarios" [level=3] [ref=e178]
+                    - paragraph [ref=e179]: User code errors, DDOS attacks exceeding purchased limits, scheduled maintenance.
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - article [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]:
+                  - img [ref=e188]
+                  - heading "INITIATE" [level=3] [ref=e189]
+              - article [ref=e191] [cursor=pointer]:
+                - generic [ref=e192]:
+                  - img [ref=e194]
+                  - heading "VERIFY" [level=3] [ref=e195]
+              - article [ref=e197] [cursor=pointer]:
+                - generic [ref=e198]:
+                  - img [ref=e200]
+                  - heading "REFUNDED" [level=3] [ref=e201]
+              - article [ref=e203] [cursor=pointer]:
+                - generic [ref=e204]:
+                  - img [ref=e206]
+                  - heading "APPROVE" [level=3] [ref=e207]
+            - img
+            - img
+            - img
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - heading "3-Day No-Reason Refund" [level=2] [ref=e210]
+              - paragraph [ref=e211]: We offer a safety net for your investment. Test our cloud with confidence.
+            - generic [ref=e212]:
+              - heading "Conditions:" [level=3] [ref=e213]
+              - paragraph [ref=e214]: "Valid for first-time instance purchases. Not applicable to renewals or resource market purchases. Processing time: 3-5 business days."
+        - generic [ref=e215]:
+          - heading "Membership at a Glance" [level=2] [ref=e217]
+          - generic [ref=e218]:
+            - article [ref=e220] [cursor=pointer]:
+              - generic [ref=e221]:
+                - heading "VIP 1-to-1 Support" [level=3] [ref=e222]
+                - paragraph [ref=e223]: A dedicated engineer assigned specifically to your account infrastructure.
+                - img [ref=e224]
+            - article [ref=e226] [cursor=pointer]:
+              - generic [ref=e227]:
+                - heading "1-Day ICP" [level=3] [ref=e228]
+                - paragraph [ref=e229]:
+                  - text: Rapid document review and
+                  - text: processing.
+                - img [ref=e230]
+            - article [ref=e232] [cursor=pointer]:
+              - generic [ref=e233]:
+                - heading "24/7/365" [level=3] [ref=e234]
+                - paragraph [ref=e235]: Continuous technical vigilance.
+                - img [ref=e236]
+            - article [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - heading "No ICP Needed" [level=3] [ref=e240]
+                - paragraph [ref=e241]:
+                  - text: Global regions available without
+                  - text: ICP filing requirements.
+                - img [ref=e242]
+            - article [ref=e244] [cursor=pointer]:
+              - generic [ref=e245]:
+                - heading "SLA+ Care" [level=3] [ref=e246]
+                - paragraph [ref=e247]: Enhanced uptime guarantees.
+                - img [ref=e248]
+            - article [ref=e250] [cursor=pointer]:
+              - img [ref=e251]
+              - generic [ref=e252]:
+                - heading "5-Day Refund Window" [level=3] [ref=e253]
+                - paragraph [ref=e254]: Extended confidence period for premium enterprise customers.
+                - img [ref=e255]
+        - generic [ref=e257]:
+          - img [ref=e261]
+          - generic [ref=e287]:
+            - heading "Meet \"OrClaw\" Your Personal AI Assistant" [level=2] [ref=e288]:
+              - text: Meet "OrClaw"
+              - text: Your Personal AI Assistant
+            - paragraph [ref=e289]: Intelligent resource management, troubleshooting, and cloud optimization at your fingertips.
+            - link "Click to jump →" [ref=e290] [cursor=pointer]:
+              - /url: "#"
+    - contentinfo [ref=e291]:
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - img [ref=e294]
+          - text: 5-Day Refund
+        - generic [ref=e295]:
+          - img [ref=e296]
+          - text: No Filing Required
+        - generic [ref=e297]:
+          - img [ref=e298]
+          - text: VIP Service
+        - generic [ref=e299]:
+          - img [ref=e300]
+          - text: 24*7 Support
+      - generic [ref=e301]:
+        - generic [ref=e302]:
+          - img "Origins Cloud" [ref=e303]
+          - paragraph [ref=e304]: A global leading cloud computing service provider committed to making innovation accessible for every enterprise.
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - heading "Hot Products" [level=3] [ref=e307]
+            - link "Cloud Server" [ref=e308] [cursor=pointer]:
+              - /url: "#"
+            - link "Bare Metal Server" [ref=e309] [cursor=pointer]:
+              - /url: "#"
+            - link "IDC Colocation" [ref=e310] [cursor=pointer]:
+              - /url: "#"
+            - link "Domain Name Registration" [ref=e311] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e312]:
+            - heading "Solutions" [level=3] [ref=e313]
+            - link "Website Solutions" [ref=e314] [cursor=pointer]:
+              - /url: "#"
+            - link "Gaming Solutions" [ref=e315] [cursor=pointer]:
+              - /url: "#"
+            - link "Financial Solutions" [ref=e316] [cursor=pointer]:
+              - /url: "#"
+            - link "E-commerce Solutions" [ref=e317] [cursor=pointer]:
+              - /url: "#"
+            - link "Mobile Solutions" [ref=e318] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e319]:
+            - heading "Ecosystem Partnership" [level=3] [ref=e320]
+            - link "Partners" [ref=e321] [cursor=pointer]:
+              - /url: "#"
+            - link "CPS Promotion" [ref=e322] [cursor=pointer]:
+              - /url: "#"
+            - link "Official Announcements" [ref=e323] [cursor=pointer]:
+              - /url: "#"
+            - link "Contact Us" [ref=e324] [cursor=pointer]:
+              - /url: "#"
+            - link "Product Center" [ref=e325] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e326]:
+            - heading "Origin Cloud Products" [level=3] [ref=e327]
+            - link "Control Center" [ref=e328] [cursor=pointer]:
+              - /url: "#"
+            - link "Security Center" [ref=e329] [cursor=pointer]:
+              - /url: "#"
+            - link "Resource Center" [ref=e330] [cursor=pointer]:
+              - /url: "#"
+            - link "Finance Center" [ref=e331] [cursor=pointer]:
+              - /url: "#"
+            - link "Account Management" [ref=e332] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e333]:
+        - paragraph [ref=e334]: © 2016-2024 OrCloud www.originscloud.io.
+        - generic [ref=e335]:
+          - link "Privacy Policy" [ref=e336] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Service" [ref=e337] [cursor=pointer]:
+            - /url: "#"
+          - link "Legal Compliance" [ref=e338] [cursor=pointer]:
+            - /url: "#"
+          - link "Friendship Links" [ref=e339] [cursor=pointer]:
+            - /url: "#"
